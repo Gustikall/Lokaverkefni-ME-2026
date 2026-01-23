@@ -1,1 +1,14 @@
 @import "tailwindcss";
+
+.inputFields{
+    width: 55%;
+    margin: 1rem;
+    border-radius: 4px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: white;
+    padding: 4px;
+    font-weight: 600;
+    font-size: x-large;
+    outline: none;
+}
