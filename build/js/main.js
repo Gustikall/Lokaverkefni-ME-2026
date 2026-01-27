@@ -1,15 +1,28 @@
+
+
 //Kortið sjálft --- Nota leaflet
 
 let map = L.map('kortið').setView([64.12895, -21.83516], 14);
 L.tileLayer('https://api.maptiler.com/maps/streets-v4/{z}/{x}/{y}.png?key=XZxiehQLe57tQxNpZllB', {
-    maxZoom: 19,
+    minZoom: 6,
     attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
-    zIndex: 1
+
 }).addTo(map);
 
+//Setur inn einn popup pinna og sækir staðsetningu hans og loggar
+let popup = L.popup();
+
+function onMapClick(e) {
+    popup.setLatLng(e.latlng)
+    popup.setContent("You clicked the map at " + e.latlng.toString())
+    popup.openOn(map);
+}
+
+map.on("click", onMapClick)
 
 
-//Tekur inputi frá startDest og endDest
+
+//Tekur input frá startDest og endDest
 const srchBtn = document.getElementById("searchBtn");
 
 const startArr = [];
@@ -24,10 +37,6 @@ srchBtn.addEventListener("click", function(){
 
     let endDest = document.getElementById("dest").value;
     document.getElementById("dest").value = "";
-
-
-
-
 
 
     //höndlar að pota uppgefnum upplýsingum í <p> og passar að einungis fimm atriði komist fyrir

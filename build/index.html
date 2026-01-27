@@ -3,27 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Le Kort</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+
     <link href="/build/src/output.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
-    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
-    crossorigin=""/>
-
-    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
-    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
-    crossorigin=""></script>
-
 
 
 </head>
-<body class="bg-black m-0 p-0 h-screen w-screen">
-    <div id="kortið" class="w-full h-full z-0 relative">
-        <!--Klukkan er orðin margt. Finn út úr þessu á morgun. Næ ekki að festa navBar ofan á kortið-->
-        <div id="navBar" class="w-1/4 sm:w-1/3 z-10 fixed top-10 left-10">
-            <div class="flex-col bg-red-900 w-full ml-4 mt-4">
+<body class="bg-black m-0 p-0 relative">
+    <div id="kortið" class="w-screen h-screen z-auto absolute top-0 right-0 bottom-0 left-0 pointer-events-auto">
+
+        <div id="navBar" class="lg:w-1/5 sm:w-1/2 absolute top-6 left-10 pointer-events-auto z500">
+
+            <div class="flex-col bg-white opacity-70 w-full ml-4 mt-4">
 
                 <div class="flex flex-row">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 self-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 self-center ml-2">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M20.25 14.15v4.25c0 1.094-.787 2.036-1.872 2.18-2.087.277-4.216.42-6.378.42s-4.291-.143-6.378-.42c-1.085-.144-1.872-1.086-1.872-2.18v-4.25m16.5 0a2.18 2.18 0 0 0 .75-1.661V8.706c0-1.081-.768-2.015-1.837-2.175a48.114 48.114 0 0 0-3.413-.387m4.5 8.006c-.194.165-.42.295-.673.38A23.978 23.978 0 0 1 12 15.75c-2.648 0-5.195-.429-7.577-1.22a2.016 2.016 0 0 1-.673-.38m0 0A2.18 2.18 0 0 1 3 12.489V8.706c0-1.081.768-2.015 1.837-2.175a48.111 48.111 0 0 1 3.413-.387m7.5 0V5.25A2.25 2.25 0 0 0 13.5 3h-3a2.25 2.25 0 0 0-2.25 2.25v.894m7.5 0a48.667 48.667 0 0 0-7.5 0M12 12.75h.008v.008H12v-.008Z" />
                     </svg>
 
@@ -31,7 +27,7 @@
                     <input id="start" placeholder="Start Location" class="inputFields flex flex-row">
                 </div>
                 <div class="flex flex-row">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 self-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 self-center ml-2">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
                     </svg>
 
@@ -41,21 +37,23 @@
                 <p class="text-white text-xl text-center">Recent Searches</p>
             </div>
 
-            <div id="recentSearches" class="w-full flex flex-row ml-4 invisible text-center">
-                <div class="w-1/2 p-2 bg-blue-950">
-                    <p id="recentSearches1" class="wrap-break-word"></p>
-                    <p id="recentSearches2" class="wrap-break-word"></p>
-                    <p id="recentSearches3" class="wrap-break-word"></p>
-                    <p id="recentSearches4" class="wrap-break-word"></p>
-                    <p id="recentSearches5" class="wrap-break-word"></p>
+            <div id="recentSearches" class="w-full flex flex-col ml-4 invisible text-center opacity-75">
+                <div class="m-2 p-2 bg-gray-300">
+                    <p class="text-2xl text-black">Recent Start Locations</p>
+                    <p id="recentSearches1" class="wrap-break-word text-black text-xl"></p>
+                    <p id="recentSearches2" class="wrap-break-word text-black text-xl"></p>
+                    <p id="recentSearches3" class="wrap-break-word text-black text-xl"></p>
+                    <p id="recentSearches4" class="wrap-break-word text-black text-xl"></p>
+                    <p id="recentSearches5" class="wrap-break-word text-black text-xl"></p>
                 </div>
 
-                <div class="w-1/2 p-2 bg-green-950 text-center">
-                    <p id="recentDest1" class="wrap-break-word"></p>
-                    <p id="recentDest2" class="wrap-break-word"></p>
-                    <p id="recentDest3" class="wrap-break-word"></p>
-                    <p id="recentDest4" class="wrap-break-word"></p>
-                    <p id="recentDest5" class="wrap-break-word"></p>
+                <div class="m-2 p-2 bg-gray-300 text-center">
+                    <p class="text-2xl text-black">Recent Destinations</p>
+                    <p id="recentDest1" class="wrap-break-word text-black text-xl"></p>
+                    <p id="recentDest2" class="wrap-break-word text-black text-xl"></p>
+                    <p id="recentDest3" class="wrap-break-word text-black text-xl"></p>
+                    <p id="recentDest4" class="wrap-break-word text-black text-xl"></p>
+                    <p id="recentDest5" class="wrap-break-word text-black text-xl"></p>
                 </div>
             </div>
         </div>
