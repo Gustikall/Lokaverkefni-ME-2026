@@ -9,28 +9,78 @@ L.tileLayer('https://api.maptiler.com/maps/streets-v4/{z}/{x}/{y}.png?key=XZxieh
 
 }).addTo(map);
 
-//Setur inn einn popup pinna og sækir staðsetningu hans og loggar
 
-let marker = L.marker();
-let tooltip = L.tooltip({
-    direction: top,
-})
-let icon = L.icon({
+
+
+const data = {
+    mjódd: {
+        cords: [64.108794, -21.842934],
+        title: "Mjódd",
+        address: `
+        <b>Mjódd</b><br>
+        Álfabakki<br>
+        Ísland<br>
+        `,
+        website: "https://https://mjodd.is/",
+        phone: "",
+    },
+    mosó: {
+        cords: [64.165169, -21.683536],
+        title: "Mosfellsbær",
+        address: `
+        <b>Mosfellsbær</b><br>
+        Merkjateigur 7<br>
+        Ísland<br>
+        `,
+        website: "https://https://mos.is/",
+        phone: "7751368"
+    },
+    vestmannaeyjar: {
+        cords: [63.431782, -20.27132],
+        title: "Vestmannaeyjabær",
+        address:  `
+        <b>Vestmannaeyjar</b><br>
+        Heimaey<br>
+        Ísland<br>
+        `,
+        website: "https://www.vestmannaeyjar.is/",
+        phone: "4882000"
+    }
+}
+
+let markerIcon = L.icon({
     iconUrl: "img/push-pin.png",
     iconSize: [32,32],
 })
 
+for (let key in data) {
+
+    const loc = data[key];
+
+    L.marker(loc.cords, {
+        title: loc.title,
+        icon: markerIcon,
+    })
+    .bindPopup(`
+        <span class="popup">
+            ${loc.address}
+            <a href="${loc.website} target ="_blank">Vefsíða</a><br>
+            Hafa Samband:<br>
+            <a href="tel:${loc.phone}">${loc.phone}</a>
+        </span>`
+    ).addTo(map)
+}
+
+let marker = L.marker()
 
 function markerClick(x){
     marker.getLatLng(x.latlng)
     marker.setLatLng(x.latlng)
-    marker.setIcon(icon)
+    marker.setIcon(markerIcon)
     marker.addTo(map)
-    marker.bindTooltip(x.latlng.toString(), {direction: "top", offset: [0,-20], draggable: true}).openTooltip();
+    marker.bindTooltip(x.latlng.toString(), {direction: "top", offset: [0,-15], draggable: true, riseOnHover: true}).openTooltip();
 }
-
 map.on("click", markerClick)
-
 
 
 //Tekur input frá startDest og endDest
