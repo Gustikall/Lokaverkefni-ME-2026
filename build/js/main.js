@@ -3,15 +3,28 @@
 //Kortið sjálft --- Nota leaflet
 
 let map = L.map('kortið').setView([64.12895, -21.83516], 14);
-L.tileLayer('https://api.maptiler.com/maps/streets-v4/{z}/{x}/{y}.png?key=XZxiehQLe57tQxNpZllB', {
-    minZoom: 6,
-    attribution: '<a href="https://www.maptiler.com/copyright/" target="_blank"> MapTiler</a> <a href="https://www.openstreetmap.org/copyright" target="_blank">| OpenStreetMap contributors</a>&copy; <a href="https://www.flaticon.com/free-icons/push-pin" target="_blank">Smashicons - Flaticon</a>'
 
-}).addTo(map);
+let streets = L.tileLayer('https://api.maptiler.com/maps/streets-v4/{z}/{x}/{y}.png?key=XZxiehQLe57tQxNpZllB', {
+    minZoom: 0,
+    attribution: '<a href="https://www.maptiler.com/copyright/" target="_blank"> MapTiler</a> <a href="https://www.flaticon.com/free-icons/push-pin" target="_blank">Smashicons - Flaticon</a>'
+
+})
+streets.addTo(map);
+
+let satallite = L.tileLayer('https://api.maptiler.com/maps/satellite-v4/256/{z}/{x}/{y}.jpg?key=XZxiehQLe57tQxNpZllB', {
+    minZoom: 5,
+    attribution: '<a href="https://www.maptiler.com/copyright/" target="_blank">&copy; MapTiler</a> <a href="https://www.openstreetmap.org/copyright" target="_blank">&copy; OpenStreetMap contributors</a>'
+})
+satallite.addTo(map)
+
+let osm = L.tileLayer('https://api.maptiler.com/maps/openstreetmap/{z}/{x}/{y}.jpg?key=XZxiehQLe57tQxNpZllB', {
+    minZoom: 5,
+    attribution: '<a href="https://www.openstreetmap.org/copyright" target="_blank">| OpenStreetMap contributors</a>&copy;'
+})
+osm.addTo(map)
 
 
-
-
+//Fyrirfram gerðir markerar
 const data = {
     mjódd: {
         cords: [64.108794, -21.842934],
@@ -72,15 +85,46 @@ for (let key in data) {
 }
 
 let marker = L.marker()
+let marker2 = L.marker([0, 0], {draggable: true}).addTo(map)
 
-function markerClick(x){
-    marker.getLatLng(x.latlng)
-    marker.setLatLng(x.latlng)
-    marker.setIcon(markerIcon)
-    marker.addTo(map)
-    marker.bindTooltip(x.latlng.toString(), {direction: "top", offset: [0,-15], draggable: true, riseOnHover: true}).openTooltip();
+navigator.geolocation.watchPosition(success, error)
+
+function success(){
+    map.addEventListener("click", function(pos) {
+
+        marker.setLatLng(pos.latlng)
+        marker.setIcon(markerIcon)
+        marker.addTo(map)
+        marker.bindTooltip("You clicked on " + pos.latlng.toString(), {direction: "top", offset: [0,-15], riseOnHover: true}).openTooltip();
+    })
 }
-map.on("click", markerClick)
+
+function error(err){
+
+    if(err.code === 1){
+        alert("Please allow geolocation access");
+    } else {
+        alert("Cannot get current location")
+    }
+}
+
+
+//Layer Control
+let baseLayers = {
+    "OpenStreetMap": osm,
+    "Streets": streets,
+    "Satallite": satallite,
+};
+
+let overlays = {
+    "Marker": marker2,
+};
+
+L.control.layers(baseLayers, overlays).addTo(map)
+
+
+
+
 
 
 //Tekur input frá startDest og endDest
