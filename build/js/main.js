@@ -6,20 +6,20 @@ let map = L.map('kortið').setView([64.12895, -21.83516], 14);
 
 let streets = L.tileLayer('https://api.maptiler.com/maps/streets-v4/{z}/{x}/{y}.png?key=XZxiehQLe57tQxNpZllB', {
     minZoom: 0,
-    attribution: '<a href="https://www.maptiler.com/copyright/" target="_blank"> MapTiler</a> <a href="https://www.flaticon.com/free-icons/push-pin" target="_blank">Smashicons - Flaticon</a>'
+    attribution: '<a href="https://www.maptiler.com/copyright/" target="_blank">MapTiler &copy</a> <a href="https://www.flaticon.com/free-icons/push-pin" target="_blank">Smashicons - Flaticon</a>'
 
 })
 streets.addTo(map);
 
 let satallite = L.tileLayer('https://api.maptiler.com/maps/satellite-v4/256/{z}/{x}/{y}.jpg?key=XZxiehQLe57tQxNpZllB', {
     minZoom: 5,
-    attribution: '<a href="https://www.maptiler.com/copyright/" target="_blank">&copy; MapTiler</a> <a href="https://www.openstreetmap.org/copyright" target="_blank">&copy; OpenStreetMap contributors</a>'
+    attribution: '<a href="https://www.maptiler.com/copyright/" target="_blank">MapTiler &copy</a>' 
 })
 satallite.addTo(map)
 
 let osm = L.tileLayer('https://api.maptiler.com/maps/openstreetmap/{z}/{x}/{y}.jpg?key=XZxiehQLe57tQxNpZllB', {
     minZoom: 5,
-    attribution: '<a href="https://www.openstreetmap.org/copyright" target="_blank">| OpenStreetMap contributors</a>&copy;'
+    attribution: '<a href="https://www.openstreetmap.org/copyright" target="_blank"> OpenStreetMap contributors</a>&copy;'
 })
 osm.addTo(map)
 
@@ -60,6 +60,7 @@ const data = {
         phone: "4882000"
     }
 }
+let marker = L.marker()
 
 let markerIcon = L.icon({
     iconUrl: "img/push-pin.png",
@@ -83,9 +84,6 @@ for (let key in data) {
         </span>`
     ).addTo(map)
 }
-
-let marker = L.marker()
-let marker2 = L.marker([0, 0], {draggable: true}).addTo(map)
 
 navigator.geolocation.watchPosition(success, error)
 
@@ -117,7 +115,7 @@ let baseLayers = {
 };
 
 let overlays = {
-    "Marker": marker2,
+    "Marker": marker
 };
 
 L.control.layers(baseLayers, overlays).addTo(map)
