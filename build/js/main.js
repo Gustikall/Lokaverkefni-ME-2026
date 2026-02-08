@@ -5,15 +5,15 @@
 let map = L.map('kortið').setView([64.12895, -21.83516], 14);
 
 let streets = L.tileLayer('https://api.maptiler.com/maps/streets-v4/{z}/{x}/{y}.png?key=XZxiehQLe57tQxNpZllB', {
-    minZoom: 0,
-    attribution: '<a href="https://www.maptiler.com/copyright/" target="_blank">MapTiler &copy</a> <a href="https://www.flaticon.com/free-icons/push-pin" target="_blank">Smashicons - Flaticon</a>'
+    minZoom: 5,
+    attribution: '<a href="https://www.maptiler.com/copyright/" target="_blank">MapTiler &copy</a>'
 
 })
 streets.addTo(map);
 
 let satallite = L.tileLayer('https://api.maptiler.com/maps/satellite-v4/256/{z}/{x}/{y}.jpg?key=XZxiehQLe57tQxNpZllB', {
     minZoom: 5,
-    attribution: '<a href="https://www.maptiler.com/copyright/" target="_blank">MapTiler &copy</a>' 
+    attribution: '<a href="https://www.maptiler.com/copyright/" target="_blank">MapTiler &copy</a> <a href="https://www.flaticon.com/free-icons/push-pin" target="_blank">Smashicons - Flaticon</a>' 
 })
 satallite.addTo(map)
 
@@ -60,7 +60,13 @@ const data = {
         phone: "4882000"
     }
 }
-let marker = L.marker()
+let marker = L.marker([], {
+    draggable: true
+});
+let marker2 = L.marker([], {
+    draggable: true
+});
+const markerArr = [];
 
 let markerIcon = L.icon({
     iconUrl: "img/push-pin.png",
@@ -85,27 +91,23 @@ for (let key in data) {
     ).addTo(map)
 }
 
-navigator.geolocation.watchPosition(success, error)
 
-function success(){
-    map.addEventListener("click", function(pos) {
 
-        marker.setLatLng(pos.latlng)
-        marker.setIcon(markerIcon)
-        marker.addTo(map)
-        marker.bindTooltip("You clicked on " + pos.latlng.toString(), {direction: "top", offset: [0,-15], riseOnHover: true}).openTooltip();
-    })
-}
+map.addEventListener("click", function(pos) {
+    markerArr.push(pos.latlng)
 
-function error(err){
+    //marker.bindTooltip("You clicked on " + marker1pos, {direction: "top", offset: [0,-15], riseOnHover: true}).openTooltip();
 
-    if(err.code === 1){
-        alert("Please allow geolocation access");
-    } else {
-        alert("Cannot get current location")
-    }
-}
+    marker.setLatLng(markerArr.at(-1))
+    marker.setIcon(markerIcon)
+    marker.addTo(map)
 
+
+    markerArr.length >= 2 ? marker2.setLatLng(markerArr.at(-2)) : marker2.setLatLng(markerArr[0])
+    marker2.setIcon(markerIcon);
+    marker2.addTo(map);
+    console.log(markerArr)
+})
 
 //Layer Control
 let baseLayers = {
@@ -115,7 +117,7 @@ let baseLayers = {
 };
 
 let overlays = {
-    "Marker": marker
+    "Marker": marker,
 };
 
 L.control.layers(baseLayers, overlays).addTo(map)
