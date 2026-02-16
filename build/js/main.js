@@ -61,10 +61,12 @@ const data = {
     }
 }
 let marker = L.marker([], {
-    draggable: true
+    draggable: true,
+    autoPan: true
 });
 let marker2 = L.marker([], {
-    draggable: true
+    draggable: true,
+    autoPan: true
 });
 const markerArr = [];
 
@@ -95,18 +97,33 @@ for (let key in data) {
 
 map.addEventListener("click", function(pos) {
     markerArr.push(pos.latlng)
-
-    //marker.bindTooltip("You clicked on " + marker1pos, {direction: "top", offset: [0,-15], riseOnHover: true}).openTooltip();
+    let marker1pos = marker.getLatLng()
 
     marker.setLatLng(markerArr.at(-1))
     marker.setIcon(markerIcon)
     marker.addTo(map)
-
+    marker.bindTooltip("You clicked on " + marker1pos, {direction: "top", offset: [0,-15], riseOnHover: true});
 
     markerArr.length >= 2 ? marker2.setLatLng(markerArr.at(-2)) : marker2.setLatLng(markerArr[0])
+
+    let marker2pos = marker2.getLatLng()
     marker2.setIcon(markerIcon);
     marker2.addTo(map);
-    console.log(markerArr)
+    marker2.bindTooltip("You clicked on " + marker2pos, {direction: "top", offset: [0,-15], riseOnHover: true});
+})
+
+marker.on("dragend", function(){
+    let markerNewLatLng = marker.getLatLng();
+    markerArr.push(markerNewLatLng)
+    marker.setLatLng(markerNewLatLng)
+    marker.bindTooltip("You moved the marker to " + markerNewLatLng, {direction: "top", offset: [0,-15]})
+})
+
+marker2.on("dragend", function(){
+    let marker2NewLatLng = marker2.getLatLng();
+    markerArr.push(marker2NewLatLng)
+    marker2.setLatLng(marker2NewLatLng)
+    marker2.bindTooltip("You moved the marker to " + marker2NewLatLng, {direction: "top", offset: [0,-15]})
 })
 
 //Layer Control
