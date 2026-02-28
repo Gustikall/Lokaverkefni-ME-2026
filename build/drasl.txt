@@ -1,0 +1,54 @@
+//Fyrirfram gerðir markerar
+/*const data = {
+    mjódd: {
+        cords: [64.108794, -21.842934],
+        title: "Mjódd",
+        address: `
+        <b>Mjódd</b><br>
+        Álfabakki<br>
+        Ísland<br>
+        `,
+        website: "https://https://mjodd.is/",
+        phone: "",
+    },
+    mosó: {
+        cords: [64.165169, -21.683536],
+        title: "Mosfellsbær",
+        address: `
+        <b>Mosfellsbær</b><br>
+        Merkjateigur 7<br>
+        Ísland<br>
+        `,
+        website: "https://https://mos.is/",
+        phone: "7751368"
+    },
+    vestmannaeyjar: {
+        cords: [63.431782, -20.27132],
+        title: "Vestmannaeyjabær",
+        address:  `
+        <b>Vestmannaeyjar</b><br>
+        Heimaey<br>
+        Ísland<br>
+        `,
+        website: "https://www.vestmannaeyjar.is/",
+        phone: "4882000"
+    }
+}*/
+
+/*for (let key in data) {
+
+    const loc = data[key];
+
+    L.marker(loc.cords, {
+        title: loc.title,
+        icon: markerIcon,
+    })
+    .bindPopup(`
+        <span class="popup">
+            ${loc.address}
+            <a href="${loc.website} target ="_blank">Vefsíða</a><br>
+            Hafa Samband:<br>
+            <a href="tel:${loc.phone}">${loc.phone}</a>
+        </span>`
+    ).addTo(map)
+}*/
