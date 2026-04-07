@@ -17,15 +17,79 @@
     <link rel="stylesheet" href="https://unpkg.com/@geoapify/leaflet-address-search-plugin@^1/dist/L.Control.GeoapifyAddressSearch.min.css" />
     <script src="https://unpkg.com/@geoapify/leaflet-address-search-plugin@^1/dist/L.Control.GeoapifyAddressSearch.min.js"></script>
 
-    <link href="/build/src/output.css" rel="stylesheet">
+    <!-- ArcGIS REST JS: request and places -->
+    <script src="https://unpkg.com/@esri/arcgis-rest-request@4/dist/bundled/request.umd.js"></script>
+    <script src="https://unpkg.com/@esri/arcgis-rest-places@1/dist/bundled/places.umd.js"></script>
+
+    <!-- Calcite components -->
+    <script type="module" src="https://js.arcgis.com/calcite-components/3.3.3/calcite.esm.js"></script>
+    <link rel="stylesheet" href="https://js.arcgis.com/calcite-components/3.3.3/calcite.css">
+    
+
+    <link href="src/output.css" rel="stylesheet">
 </head>
-<body class="bg-black m-0 p-0 relative">
-    <div id="kortið" class="w-screen h-screen">
-        <!--<div id="srchDiv" class="flex flex-row relative border-2 sm:w-1/3 lg:w-1/5 ml-12 mt-6 p-2 bg-red-500 z">
-            <input id="inputField" maxlength="38" placeholder="Enter an address here" class="p-1 text-xl w-full border-2">
-            <button id="clearBtn" class="bg-blue-700 font-bold text-xl ml-2 cursor-pointer">Clear</button>
+<body id="kortið" class="w-screen h-screen m-0 p-0 relative flex flex-row">
+    <div id="place-control" class="absolute top-17 left-13 z sm:w-2/5 lg:w-90 visible">
+      <div class="search">
+        <calcite-input type="text" id="search-input" placeholder="Type in a place name or category" class="w-full hidden">
+          <calcite-button
+            kind="inverse"
+            icon-start="search"
+            id="search-button"
+            type="submit"
+            slot="action"
+          ></calcite-button>
+        </calcite-input>
+      </div>
+    </div>
+
+    <div id="navBar" class="bg-transparent h-screen flex flex-col justify-center z">
+
+        <div id="places" class="cursor-pointer relative group/addressfinder mt-2 ml-1 ">
+
+            <!--<img src="img/places.svg" class="h-10 mt-1">
+            <span class="w-fit absolute top-1/4 left-full
+            invisible group-hover/addressfinder:visible
+            bg-gray-400 text-black font-bold rounded-3xl p-2
+            z text-nowrap ml-1
+            ">Address Finder</span>-->
+
         </div>
-        <div id="autoCompleteResults" class="flex h-1/5 w-1/5 ml-12 relative z"></div>-->
+
+        <div id="routing" class="relative cursor-pointer group/routing">
+
+            <!--<img src="img/routing.svg" class="h-10 mt-2 ml-1">
+            <span class="w-fit absolute top-1/4 left-full
+            invisible group-hover/routing:visible
+            bg-gray-400 text-black font-bold rounded-3xl p-2
+            z text-nowrap ml-1
+            ">Áhugaverðir Staðir</span>-->
+        </div>
+
+        <div id="theHolyBible" class="relative group/theHolyBible">
+            <a href="https://www.instagram.com/gusti.50cal/" target="_blank" class="bg-transparent h-11/12 w-11/12 absolute mt-2 ml-1 cursor-pointer"></a>
+            <img src="/build/img/Instagram_icon.png" class="h-10 mt-2 ml-1 cursor-pointer">
+            <span class="w-fit absolute top-1/4 left-full
+            invisible group-hover/theHolyBible:visible
+            bg-gray-400 text-black font-bold rounded-3xl p-2
+            z text-nowrap ml-1
+            ">The Holy Bible
+
+            </span>
+        </div>
+
+    </div>
+
+    <div id="questionMark" class="absolute bottom-15 right-15 z group/lequestion">
+
+        <div class="relative w-full h-full">
+            <img src="/build/img/questionmark.png" class="w-10 h-10">
+            <span class="w-fit bottom-full left-1/2 -translate-x-1/2 absolute
+            invisible group-hover/lequestion:visible
+            bg-cyan-400 rounded-lg text-md text-black font-bold
+            p-2"
+            >ATH! Það gæti vantað einhverjar niðurstöður.</span>
+        </div>
 
     </div>
 
