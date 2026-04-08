@@ -29,7 +29,7 @@
     <link href="src/output.css" rel="stylesheet">
 </head>
 <body id="kortið" class="w-screen h-screen m-0 p-0 relative flex flex-row">
-    <div id="place-control" class="absolute top-17 left-13 z sm:w-2/5 lg:w-90 visible">
+    <div id="place-control" class="absolute top-8 superLeft z sm:w-2/5 lg:w-90 visible z">
       <div class="search">
         <calcite-input type="text" id="search-input" placeholder="Type in a place name or category" class="w-full hidden">
           <calcite-button
@@ -78,6 +78,10 @@
             </span>
         </div>
 
+        <div id="clearMarkersButton">
+            <button class="bg-red-700 h-14 w-14 absolute mt-2 ml-1 rounded-2xl cursor-pointer" onclick="clearMarkers()">Clear<br>Markers</button>
+        </div>
+
     </div>
 
     <div id="questionMark" class="absolute bottom-15 right-15 z group/lequestion">
@@ -95,5 +99,6 @@
 
 
     <script src="/build/js/main.js"></script>
+    <script src="/build/js/fastir_markers.js"></script>
 </body>
 </html>

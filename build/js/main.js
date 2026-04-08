@@ -24,6 +24,9 @@ L.DomEvent.disableClickPropagation(theHolyBible)
 
 const genericVariableName = document.getElementById("place-control");
 L.DomEvent.disableClickPropagation(genericVariableName)
+
+const ImOutOfFunnyNamesForTheseVariables = document.getElementById("clearMarkersButton");
+L.DomEvent.disableClickPropagation(ImOutOfFunnyNamesForTheseVariables)
 /////////////////////////////////////////////////
 
 
@@ -93,6 +96,7 @@ map.on("click", function(pos) {
             markersLimit.shift()
         }
         map.setView(result.latlng)
+        console.log(result.address.Match_addr, pos.latlng)
         
         marker.on("dragend", function() {
             let newPos = marker.getLatLng();
@@ -106,6 +110,7 @@ map.on("click", function(pos) {
                 
                 marker.bindPopup(`<b>${result.address.Match_addr}</b>`, {direction: "top", offset: [0,-15], riseOnHover: true}).openPopup()
                 map.setView(newPos)
+                console.log(newPos)
             })
         })
         
@@ -143,7 +148,7 @@ const layerGroup = L.layerGroup().addTo(map);
 
 const control = document.getElementById("place-control");
 const input = document.getElementById("search-input");
-const placeKeywords = ["Restaurants", "Hotel", "Museums", "Gyms", "Gas"];
+const placeKeywords = ["Restaurants", "Hotels", "Museums", "Gyms", "Gas"];
 
 function showPlaces(text) {
 
@@ -166,6 +171,8 @@ function showPlaces(text) {
             const placesMarker = L.marker([result.location.y, result.location.x],{icon: markerIcon}).addTo(layerGroup);
 
             placesMarker.id = result.placeId;
+            console.log(result)
+            console.log(result.location.y, result.location.x, result.name)
 
             placesMarker.bindPopup(getDetails, {
                 minWidth: 200,
@@ -185,6 +192,7 @@ function showPlaces(text) {
         let popupContents = `<b>${result.placeDetails.name}</b><br>`;
         if (result.placeDetails.address.streetAddress) {popupContents += `${result.placeDetails.address.streetAddress}<br>`} else { popupContents += "Ekkert heimilisfang fannst <br>"};
         if (result.placeDetails.contactInfo.telephone) {popupContents += `${result.placeDetails.contactInfo.telephone}`} else{ popupContents += "Ekkert símanúmer fannst"}
+        console.log(result.placeDetails.address.streetAddress)
 
         popup.innerHTML = popupContents;
     });
@@ -213,3 +221,8 @@ placeKeywords.forEach((category) => {
     });
 
 });
+
+//Takki til að hreinsa út alla núverandi markera!
+function clearMarkers() {
+    markerLayerGroup.clearLayers();
+}
