@@ -27,6 +27,9 @@ L.DomEvent.disableClickPropagation(genericVariableName)
 
 const ImOutOfFunnyNamesForTheseVariables = document.getElementById("clearMarkersButton");
 L.DomEvent.disableClickPropagation(ImOutOfFunnyNamesForTheseVariables)
+
+const CantAWhiteBoyCatchAMoodInPeace = document.getElementById("clearLayers");
+L.DomEvent.disableClickPropagation(CantAWhiteBoyCatchAMoodInPeace);
 /////////////////////////////////////////////////
 
 
