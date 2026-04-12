@@ -1,4 +1,7 @@
+import JandSons from "./prices.json" with {type: "json"}
+JandSons
 'use strict'
+
 
 const N1link = "https://n1.is/is";
 const orkanLink = "https://orkan.is/";
@@ -762,6 +765,7 @@ function addMarker(loc, company) {
     }).bindPopup(`
         <span class="popup">
             <strong>${loc.titill}</strong><br>
+            <strong>Bensín: 123, Díesel: 123</strong><br>
             <a href="${loc.website}" target ="_blank">Heimasíða</a><br>
             Hafa Samband:<br>
             <a href="tel:${loc.phone}">${loc.phone}</a>
@@ -776,34 +780,21 @@ map.addLayer(orkanLayer)
 map.addLayer(atlantisoliaLayer)
 
 
-function clearOlis(){
-    olisLayer.clearLayers()
-}
-function clearN1(){
-    N1Layer.clearLayers()
-}
-function clearOB(){
-    OBLayer.clearLayers()
-}
-function clearOrkan(){
-    orkanLayer.clearLayers()
-}
-function clearAO(){
-    atlantisoliaLayer.clearLayers()
-}
 
-function addOlis(){
-    map.addLayer(olisLayer)
-}
-function addN1(){
-    map.addLayer(N1Layer)
-}
-function addOB(){
-    map.addLayer(OBLayer)
-}
-function addOrkan(){
-    map.addLayer(orkanLayer)
-}
-function addAO(){
-    map.addLayer(atlantisoliaLayer)
-}
+
+
+document.getElementById("clearOlis").addEventListener("click", () => {
+    olisLayer.clearLayers()
+});
+document.getElementById("clearN1").addEventListener("click", () => {
+    N1Layer.clearLayers()
+});
+document.getElementById("clearOB").addEventListener("click", () => {
+    OBLayer.clearLayers()
+});
+document.getElementById("clearOrkan").addEventListener("click", () => {
+    orkanLayer.clearLayers()
+});
+document.getElementById("clearAO").addEventListener("click", () => {
+    atlantisoliaLayer.clearLayers()
+});
