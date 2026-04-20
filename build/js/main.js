@@ -125,7 +125,7 @@ const addressSearchControl = L.control.addressSearch(key, {
   className: "searchBar",
     
   resultCallback: (address) => {
-    console.log(address)
+    console.log(address.lat, ",", address.lon)
 
     if (marker) {
       marker.remove();
