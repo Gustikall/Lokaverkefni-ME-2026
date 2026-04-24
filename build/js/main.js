@@ -13,32 +13,30 @@ fetch(`https://api.geoapify.com/v1/routing?waypoints=${fromWaypoint.join(',')}|$
 const noMouseClickingAroundThesePartsOfTown = document.getElementById("questionMark");
 L.DomEvent.disableClickPropagation(noMouseClickingAroundThesePartsOfTown);
 
-const sameAsAbove = document.getElementById("places");
-L.DomEvent.disableClickPropagation(sameAsAbove);
-
-const aintNothingButGoddamnErrorsInThesePlacesOfTown = document.getElementById("routing");
-L.DomEvent.disableClickPropagation(aintNothingButGoddamnErrorsInThesePlacesOfTown);
-
-const theHolyBible = document.getElementById("theHolyBible");
-L.DomEvent.disableClickPropagation(theHolyBible)
+const thereAintNothingButGoddamnedErrorsAround = document.getElementById("infobar");
+L.DomEvent.disableClickPropagation(thereAintNothingButGoddamnedErrorsAround)
 
 const genericVariableName = document.getElementById("place-control");
 L.DomEvent.disableClickPropagation(genericVariableName)
 
-const ImOutOfFunnyNamesForTheseVariables = document.getElementById("clearMarkersButton");
-L.DomEvent.disableClickPropagation(ImOutOfFunnyNamesForTheseVariables)
-
-const CantAWhiteBoyCatchAMoodInPeace = document.getElementById("clearLayers");
-L.DomEvent.disableClickPropagation(CantAWhiteBoyCatchAMoodInPeace);
+//const ImOutOfFunnyNamesForTheseVariables = document.getElementById("clearMarkersButton");
+//L.DomEvent.disableClickPropagation(ImOutOfFunnyNamesForTheseVariables)
 /////////////////////////////////////////////////
 
 
 //Kortið sjálft --- Nota leaflet og ESRI
-let map = L.map('kortið').setView([64.12895, -21.83516], 15);
+let map = L.map('kortið', {
+    attributionControl: false,
+    center: [64.12895, -21.83516],
+    zoom: 13,
+    minZoom: 10,
+    maxZoom: 15
+});
+L.control.attribution({position: "topleft"}).addTo(map)
 
 let satallite = L.tileLayer('https://api.maptiler.com/maps/satellite-v4/256/{z}/{x}/{y}.jpg?key=XZxiehQLe57tQxNpZllB', {
     attribution: '<a href="https://www.maptiler.com/copyright/" target="_blank">MapTiler &copy</a> <a href="https://www.flaticon.com/free-icons/push-pin" target="_blank">Smashicons - Flaticon</a>' 
-})
+}).addTo(map);
 
 let osm = L.tileLayer('https://api.maptiler.com/maps/openstreetmap/{z}/{x}/{y}.jpg?key=XZxiehQLe57tQxNpZllB', {
     attribution: '<a href="https://www.openstreetmap.org/copyright" target="_blank"> OpenStreetMap contributors</a>&copy; <a href="https://www.flaticon.com/free-icons/push-pin" target="_blank">Smashicons - Flaticon</a>'
@@ -46,24 +44,22 @@ let osm = L.tileLayer('https://api.maptiler.com/maps/openstreetmap/{z}/{x}/{y}.j
 
 let esri = L.esri.Vector.vectorBasemapLayer("arcgis/outdoor", {
     token: ARCGIStkn,
-}).addTo(map);
+})
 
 //Þarf að fjarlæga zoomControlið og bæta því inn aftur einhverra hluta vegna
 map.zoomControl.remove()
 L.control.zoom({
-    position: "bottomright"
+    position: "topleft"
 }).addTo(map)
 //////////////////////////////////////////////////////
 
 //Layer Control
 let baseLayers = {
-    //position: bottomLeft,
     "Esri Map": esri,
     "OpenStreetMap": osm,
     "Satallite": satallite,
 };
-L.control.layers(baseLayers).addTo(map)
-
+const layerControl = L.control.layers(baseLayers).addTo(map)
 
 //Marker og function sem bætir við Markers
 let markerIcon = L.icon({
@@ -76,8 +72,8 @@ let marker = L.marker({
 })
 
 //Setur takmark á hversu margir markerar geta verið á kortinu. Fjarlægir gömlu punktana þegar þröskuldnum er náð
-const maxMarkers = 5;
-const markersLimit = [];
+const maxMarkers = 10;
+const markersArray = [];
 
 
 
@@ -93,10 +89,10 @@ map.on("click", function(pos) {
         }
 
         let marker = L.marker(result.latlng,{draggable:true, icon:markerIcon}).addTo(map).bindPopup(`<b>${result.address.Match_addr}</b>`, {direction: "top", offset: [0,-15], riseOnHover: true}).openPopup().addTo(markerLayerGroup);
-        markersLimit.push(marker)
-        if (markersLimit.length > maxMarkers){
-            markerLayerGroup.removeLayer(markersLimit[0]);
-            markersLimit.shift()
+        markersArray.push(marker)
+        if (markersArray.length > maxMarkers){
+            markerLayerGroup.removeLayer(markersArray[0]);
+            markersArray.shift()
         }
         map.setView(result.latlng)
         console.log(result.address.Match_addr, pos.latlng)
@@ -151,7 +147,7 @@ const layerGroup = L.layerGroup().addTo(map);
 
 const control = document.getElementById("place-control");
 const input = document.getElementById("search-input");
-const placeKeywords = ["Restaurants", "Hotels", "Museums", "Gyms", "Gas"];
+const placeKeywords = ["Restaurants", "Hotels", "Museums", "Gyms"];
 
 function showPlaces(text) {
 

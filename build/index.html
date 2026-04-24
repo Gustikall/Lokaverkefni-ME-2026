@@ -28,7 +28,8 @@
 
     <link href="src/output.css" rel="stylesheet">
 </head>
-<body id="kortið" class="w-screen h-screen m-0 p-0 relative flex flex-row">
+<body id="kortið" class="w-screen h-screen m-0 p-0 relative flex flex-col">
+
     <div id="place-control" class="absolute top-8 superLeft z sm:w-2/5 lg:w-90 visible z">
       <div class="search">
         <calcite-input type="text" id="search-input" placeholder="Type in a place name or category" class="w-full hidden">
@@ -43,47 +44,6 @@
       </div>
     </div>
 
-    <div id="navBar" class="bg-transparent h-screen flex flex-col justify-center z">
-
-        <div id="places" class="cursor-pointer relative group/addressfinder mt-2 ml-1 ">
-
-            <!--<img src="img/places.svg" class="h-10 mt-1">
-            <span class="w-fit absolute top-1/4 left-full
-            invisible group-hover/addressfinder:visible
-            bg-gray-400 text-black font-bold rounded-3xl p-2
-            z text-nowrap ml-1
-            ">Address Finder</span>-->
-
-        </div>
-
-        <div id="routing" class="relative cursor-pointer group/routing">
-
-            <!--<img src="img/routing.svg" class="h-10 mt-2 ml-1">
-            <span class="w-fit absolute top-1/4 left-full
-            invisible group-hover/routing:visible
-            bg-gray-400 text-black font-bold rounded-3xl p-2
-            z text-nowrap ml-1
-            ">Áhugaverðir Staðir</span>-->
-        </div>
-
-        <div id="theHolyBible" class="relative group/theHolyBible">
-            <a href="https://www.instagram.com/gusti.50cal/" target="_blank" class="bg-transparent h-11/12 w-11/12 absolute mt-2 ml-1 cursor-pointer"></a>
-            <img src="/build/img/Instagram_icon.png" class="h-10 mt-2 ml-1 cursor-pointer">
-            <span class="w-fit absolute top-1/4 left-full
-            invisible group-hover/theHolyBible:visible
-            bg-gray-400 text-black font-bold rounded-3xl p-2
-            z text-nowrap ml-1
-            ">The Holy Bible
-
-            </span>
-        </div>
-
-        <div id="clearMarkersButton">
-            <button class="bg-red-700 h-14 w-14 absolute mt-2 ml-1 rounded-2xl cursor-pointer" onclick="clearMarkers()">Clear<br>Markers</button>
-        </div>
-
-    </div>
-
     <div id="questionMark" class="absolute bottom-15 right-15 z group/lequestion">
 
         <div class="relative w-full h-full">
@@ -96,23 +56,17 @@
         </div>
 
     </div>
-    
-    <div id="clearLayers" class="absolute h-fit w-1/4 left-3/4 top-1/4 border-2 z">
-        <button id="clearOlis" class="bg-red-700 h-14 w-14 mt-2 ml-1 rounded-2xl cursor-pointer">Clear<br>Olís</button>
-        <button id="clearN1" class="bg-red-700 h-14 w-14 mt-2 ml-1 rounded-2xl cursor-pointer">Clear<br>N1</button>
-        <button id="clearOB" class="bg-red-700 h-14 w-14 mt-2 ml-1 rounded-2xl cursor-pointer">Clear<br>OB</button>
-        <button id="clearOrkan" class="bg-red-700 h-14 w-14 mt-2 ml-1 rounded-2xl cursor-pointer">Clear<br>Orkan</button>
-        <button id="clearAO" class="bg-red-700 h-14 w-14 mt-2 ml-1 rounded-2xl cursor-pointer">Clear<br>AO</button>
 
-        <button class="bg-red-700 h-14 w-14 mt-2 ml-1 rounded-2xl cursor-pointer" onclick="addOlis()">Add<br>Olís</button>
-        <button class="bg-red-700 h-14 w-14 mt-2 ml-1 rounded-2xl cursor-pointer" onclick="addN1()">Add<br>N1</button>
-        <button class="bg-red-700 h-14 w-14 mt-2 ml-1 rounded-2xl cursor-pointer" onclick="addOB()">Add<br>OB</button>
-        <button class="bg-red-700 h-14 w-14 mt-2 ml-1 rounded-2xl cursor-pointer" onclick="addOrkan()">Add<br>Orkan</button>
-        <button class="bg-red-700 h-14 w-14 mt-2 ml-1 rounded-2xl cursor-pointer" onclick="addAO()">Add<br>AO</button>
+    <!--<div id="clearMarkersButton" class="absolute left-1 top-1 z">
+        <button class="bg-red-600 h-14 w-14 mt-2 ml-1 rounded-2xl cursor-pointer" onclick="clearMarkers()">Clear<br>Markers</button>
+    </div>-->
+    <div id="infobar" class="bg-white mt-auto w-full h-4 z justify-center flex cursor-default">
+        <p> Ef einhverjar upplýsingar eru rangar má endilega senda tölvupóst á agustmar56@gmail.com. Birt með fyrirvara um breytingar</p>
     </div>
 
     <script src="./js/prices.json"></script>
     <script src="/build/js/main.js"></script>
-    <script type="module" src="/build/js/fastir_markers.js"></script>
+    <script src="/build/js/fastir_markers.js"></script>
+
 </body>
 </html>
