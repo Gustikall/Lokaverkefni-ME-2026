@@ -3,11 +3,11 @@
 //hendir inn markerum eftir að hafa sótt viðeigandi gögn í json skjalið
 async function loadData() {
     //Fastir markerar
-    const markerar = await fetch("./js/json/markerar.json");
+    const markerar = await fetch("/docs/js/json/markerar.json");
     const markerarData = await markerar.json();
 
     //nýja verðið
-    const newPrices = await fetch("./js/json/prices.json");
+    const newPrices = await fetch("/docs/js/json/prices.json");
     const pricesData = await newPrices.json()
 
     for (let cords of markerarData) {
