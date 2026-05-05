@@ -30,14 +30,14 @@ const orkanLink = "https://orkan.is/";
 const atlantsoliaLink = "https://www.atlantsolia.is/"
 const OBLink = "https://www.ob.is/";
 const olisLink = "https://www.olis.is/";
-const costcoLink = "https://www.costco.is/"
+//const costcoLink = "https://www.costco.is/"
 
 const N1phone = "440-1000";
 const orkanPhone = "464-6000";
 const atlantsoliaPhone = "591-3100";
 const OBPhone = "515-1141";
 const olisPhone = "515-1000";
-const costcoPhone = "532-5555"
+//const costcoPhone = "532-5555"
 
 const olisIcon = L.icon({
     iconUrl: "img/Olis.png",
@@ -61,10 +61,10 @@ const atlantsoliaIcon = L.icon({
     iconUrl: "img/AO.png",
     iconSize: [32,32],
 })
-const costcoIcon = L.icon({
+/*const costcoIcon = L.icon({
     iconUrl: "img/costco.png",
     iconSize: [32,32],
-})
+})*/
 
 const phoneMap = {
     olis: olisPhone,
@@ -72,7 +72,7 @@ const phoneMap = {
     ob: OBPhone,
     orkan: orkanPhone,
     atlantsolia: atlantsoliaPhone,
-    costco: costcoPhone
+    //costco: costcoPhone
 }
 
 const linkMap = {
@@ -81,7 +81,7 @@ const linkMap = {
     ob: OBLink,
     orkan: orkanLink,
     atlantsolia: atlantsoliaLink,
-    costco: costcoLink
+    //costco: costcoLink
 }
 
 const iconMap = {
@@ -90,7 +90,7 @@ const iconMap = {
     ob: OBicon,
     orkan: orkanIcon,
     atlantsolia: atlantsoliaIcon,
-    costco: costcoIcon
+    //costco: costcoIcon
 }
 
 const olisLayer = L.layerGroup()
@@ -98,7 +98,7 @@ const N1Layer = L.layerGroup()
 const OBLayer = L.layerGroup()
 const orkanLayer = L.layerGroup()
 const atlantsoliaLayer = L.layerGroup()
-const costcoLayer = L.layerGroup()
+//const costcoLayer = L.layerGroup()
 
 const layerMap = {
     olis: olisLayer,
@@ -106,7 +106,7 @@ const layerMap = {
     ob: OBLayer,
     orkan: orkanLayer,
     atlantsolia: atlantsoliaLayer,
-    costco: costcoLayer
+    //costco: costcoLayer
 }
 
 const zoomlevel = 14
