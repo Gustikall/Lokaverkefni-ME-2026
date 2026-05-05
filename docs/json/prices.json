@@ -1733,5 +1733,12 @@
     "bensin_price":null,
     "disel_price":"265.90",
     "id":"N1Þorlákshöfn"
+},
+{
+    "station":"Costco",
+    "address":"Garðabær",
+    "bensin_price":"193.30",
+    "disel_price":"240.60",
+    "id":"CostcoGarðabær"
 }
 ]
