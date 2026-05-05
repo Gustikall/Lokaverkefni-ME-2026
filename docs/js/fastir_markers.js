@@ -12,16 +12,16 @@ async function loadData() {
     const pricesData = await newPrices.json()
 
     for (let cords of markerarData) {
-    const coordinates = cords.cords;
+        const coordinates = cords.cords;
 
-    const info = pricesData.find(p => p.id === cords.id);
+        const info = pricesData.find(p => p.id === cords.id);
 
-    if (!info){
-        console.warn("hundsar ótengdan marker", cords.id);
-        continue;
+        if (!info){
+            console.warn("hundsar ótengdan marker", cords.id);
+            continue;
+        }
+        addMarker(info, coordinates);
     }
-    addMarker(info, coordinates);
-}
 }
 loadData();
 
