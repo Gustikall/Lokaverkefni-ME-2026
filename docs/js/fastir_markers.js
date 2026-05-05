@@ -1,16 +1,27 @@
 'use strict'
 
+
 //hendir inn markerum eftir að hafa sótt viðeigandi gögn í json skjalið
 async function loadData() {
-    const res = await fetch("./js/prices.json");
-    const objData = await res.json();
+    //Fastir markerar
+    const markerar = await fetch("/docs/json/markerar.json");
+    const markerarData = await markerar.json();
 
-    for (let station of objData) {
-        if (!station.cords) continue
+    //nýja verðið
+    const newPrices = await fetch("/docs/json/prices.json");
+    const pricesData = await newPrices.json()
 
-        //console.log(station, station.station)
-        addMarker(station, station.station);
+    for (let cords of markerarData) {
+    const coordinates = cords.cords;
+
+    const info = pricesData.find(p => p.id === cords.id);
+
+    if (!info){
+        console.warn("hundsar ótengdan marker", cords.id);
+        continue;
     }
+    addMarker(info, coordinates);
+}
 }
 loadData();
 
@@ -99,9 +110,9 @@ const layerMap = {
 }
 
 const zoomlevel = 14
-function addMarker(station) {
+function addMarker(info, coordinates) {
 
-    const key = station.station
+    const key = info.station
         .toLowerCase()
         .normalize("NFD")
         .replace(/[\u0300-\u036f]/g, "");
@@ -112,10 +123,10 @@ function addMarker(station) {
     const phone = phoneMap[key] || "N/A";
     const link = linkMap[key] || "N/A";
 
-    const markerGas = L.marker(station.cords, { icon })
+    const markerGas = L.marker(coordinates, { icon })
         .bindPopup(`
-            <strong>${station.station} - ${station.address}</strong><br>
-            <strong>Bensín: ${station.bensin_price || "N/A"}, Dísel: ${station.disel_price || "N/A"}</strong><br>
+            <strong>${info.station} - ${info.address}</strong><br>
+            <strong>Bensín: ${info.bensin_price || "N/A"}, Dísel: ${info.disel_price || "N/A"}</strong><br>
             <a href="${link}"target="_blank">Vefsíða</a><br>
             <a href="Símanúmer:${phone}">${phone}</a>
         `)

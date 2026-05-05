@@ -16,8 +16,8 @@ L.DomEvent.disableClickPropagation(noMouseClickingAroundThesePartsOfTown);
 const thereAintNothingButGoddamnedErrorsAround = document.getElementById("infobar");
 L.DomEvent.disableClickPropagation(thereAintNothingButGoddamnedErrorsAround)
 
-const genericVariableName = document.getElementById("place-control");
-L.DomEvent.disableClickPropagation(genericVariableName)
+//const genericVariableName = document.getElementById("place-control");
+//L.DomEvent.disableClickPropagation(genericVariableName)
 
 //const ImOutOfFunnyNamesForTheseVariables = document.getElementById("clearMarkersButton");
 //L.DomEvent.disableClickPropagation(ImOutOfFunnyNamesForTheseVariables)
@@ -29,8 +29,8 @@ let map = L.map('kortið', {
     attributionControl: false,
     center: [64.12895, -21.83516],
     zoom: 13,
-    minZoom: 10,
-    maxZoom: 15
+    minZoom: 7,
+    maxZoom: 15,
 });
 L.control.attribution({position: "topleft"}).addTo(map)
 
@@ -142,6 +142,7 @@ const addressSearchControl = L.control.addressSearch(key, {
 });
 map.addControl(addressSearchControl);
 
+/* Hef ekki þörf fyrir Geoplaces eins og er. Nota það hugsanlega í framtíðinni
 //Geoplaces
 const layerGroup = L.layerGroup().addTo(map);
 
@@ -220,8 +221,15 @@ placeKeywords.forEach((category) => {
     });
 
 });
+*/
 
 //Takki til að hreinsa út alla núverandi markera!
 function clearMarkers() {
     markerLayerGroup.clearLayers();
 }
+
+//Decluttering!
+map.on("zoomstart", function(){
+    console.log(map.getZoom())
+
+})
