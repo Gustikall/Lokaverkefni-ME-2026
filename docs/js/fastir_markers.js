@@ -1,14 +1,13 @@
 'use strict'
 
-const BASE = "/Lokaverkefni-ME-2026/";
 //hendir inn markerum eftir að hafa sótt viðeigandi gögn í json skjalið
 async function loadData() {
     //Fastir markerar
-    const markerar = await fetch("../docs/json/markerar.json");
+    const markerar = await fetch("/Lokaverkefni-ME-2026/docs/json/markerar.json");
     const markerarData = await markerar.json();
 
     //nýja verðið
-    const newPrices = await fetch("../docs/json/prices.json");
+    const newPrices = await fetch("/Lokaverkefni-ME-2026/docs/json/prices.json");
     const pricesData = await newPrices.json()
 
     for (let cords of markerarData) {
