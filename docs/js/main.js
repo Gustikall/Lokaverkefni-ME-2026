@@ -30,7 +30,7 @@ let map = L.map('kortið', {
     center: [64.12895, -21.83516],
     zoom: 13,
     minZoom: 7,
-    maxZoom: 15,
+    maxZoom: 18,
 });
 L.control.attribution({position: "topleft"}).addTo(map)
 

@@ -1,6 +1,10 @@
 import requests
 import json
 from bs4 import BeautifulSoup
+from pathlib import Path
+
+BASE_DIR = Path(__file__).resolve().parent
+outputFile = BASE_DIR.parent / "js" / "prices.json"
 
 # Hleður inn gögnin frá gsm bensín
 urls = [
@@ -55,7 +59,7 @@ for soup in soups:
 
 data = list(stations.values())
 
-with open("./docs/json/prices.json", "w") as f:
+with open(outputFile, "w") as f:
     f.write("[")
     for item in data:
         f.write(json.dumps(item, separators=(",", ":"), ensure_ascii=False, indent=4))
