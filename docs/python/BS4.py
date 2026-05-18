@@ -60,12 +60,6 @@ for soup in soups:
 data = list(stations.values())
 
 with open(outputFile, "w") as f:
-    f.write("[")
-    for item in data:
-        f.write(json.dumps(item, separators=(",", ":"), ensure_ascii=False, indent=4))
-        f.write(",")
-        f.write("\n")
-    
-    f.write("]")
+    json.dump(data, f, ensure_ascii=False, indent=4)
 
 
