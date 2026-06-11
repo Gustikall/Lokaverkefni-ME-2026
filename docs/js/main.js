@@ -46,7 +46,7 @@ let esri = L.esri.Vector.vectorBasemapLayer("arcgis/outdoor", {
     token: ARCGIStkn,
 })
 
-//Þarf að fjarlæga zoomControlið og bæta því inn aftur einhverra hluta vegna
+//Þarf að fjarlæga zoomControlið og bæta því inn aftur einhverra hluta vegna til að færa það um stað
 map.zoomControl.remove()
 L.control.zoom({
     position: "topleft"
