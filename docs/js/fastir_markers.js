@@ -14,11 +14,7 @@ async function loadData() {
         const coordinates = cords.cords;
 
         const info = pricesData.find(p => p.id === cords.id);
-
-        if (!info){
-            console.warn("hundsar ótengdan marker", cords.id);
-            continue;
-        }
+        
         addMarker(info, coordinates);
     }
 }
