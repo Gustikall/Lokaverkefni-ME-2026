@@ -80,6 +80,12 @@ const markersArray = [];
 const markerLayerGroup = L.layerGroup().addTo(map);
 const geocodeService = L.esri.Geocoding.geocodeService();
 
+map.on("load", function(getPos){
+    L.esri.Geocoding.reverseGeocode({apikey: ARCGIStkn})
+
+
+})
+
 map.on("click", function(pos) {
     L.esri.Geocoding.reverseGeocode({
         apikey: ARCGIStkn
