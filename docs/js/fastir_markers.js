@@ -14,7 +14,7 @@ async function loadData() {
         const coordinates = cords.cords;
 
         const info = pricesData.find(p => p.id === cords.id);
-        
+
         addMarker(info, coordinates);
     }
 }
@@ -123,7 +123,7 @@ function addMarker(info, coordinates) {
             <strong>${info.station} - ${info.address}</strong><br>
             <strong>Bensín: ${info.bensin_price || "N/A"}, Dísel: ${info.disel_price || "N/A"}</strong><br>
             <a href="${link}"target="_blank">Vefsíða</a><br>
-            <a href="Símanúmer:${phone}">${phone}</a>
+            <strong>Símanúmer: ${phone}</strong>
         `)
         .addTo(layer);
         layer.addTo(map)
@@ -134,6 +134,18 @@ function addMarker(info, coordinates) {
         })
 }
 
+const costcoMarker = L.marker([64.07545732729858, -21.915240883827213],{icon: costcoIcon})
+    .bindPopup(`
+        <strong>Costco - Kauptún 3</strong><br>
+        <strong>Bensín: 193.3, Dísel: 231.6</strong><br>
+        <a href="${costcoLink}"target="_blank">Vefsíða</a><br>
+        <strong>Símanúmer: ${costcoPhone}</strong>`
+    ).addTo(map)
+
+costcoMarker.on("click", function(e) {
+    const pos = costcoMarker.getLatLng();
+    map.setView(pos, zoomlevel)
+})
 
 
 layerControl.addOverlay(olisLayer, "Olís")
