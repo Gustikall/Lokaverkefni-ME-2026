@@ -140,7 +140,8 @@ const costcoMarker = L.marker([64.07545732729858, -21.915240883827213],{icon: co
         <strong>Bensín: 193.3, Dísel: 231.6</strong><br>
         <a href="${costcoLink}"target="_blank">Vefsíða</a><br>
         <strong>Símanúmer: ${costcoPhone}</strong>`
-    ).addTo(map)
+    ).addTo(costcoLayer);
+    costcoLayer.addTo(map)
 
 costcoMarker.on("click", function(e) {
     const pos = costcoMarker.getLatLng();
@@ -154,3 +155,14 @@ layerControl.addOverlay(OBLayer, "ÓB")
 layerControl.addOverlay(orkanLayer, "Orkan")
 layerControl.addOverlay(atlantsoliaLayer, "AtlantsOlía")
 layerControl.addOverlay(costcoLayer, "Costco")
+
+
+//Verð sortari -----------------------------------------------
+async function priceSorter() {
+    const getPrices = await fetch ("js/prices.json")
+    const pricesFetched = await getPrices.json()
+
+    
+}
+
+priceSorter();

@@ -80,12 +80,6 @@ const markersArray = [];
 const markerLayerGroup = L.layerGroup().addTo(map);
 const geocodeService = L.esri.Geocoding.geocodeService();
 
-map.on("load", function(getPos){
-    L.esri.Geocoding.reverseGeocode({apikey: ARCGIStkn})
-
-
-})
-
 map.on("click", function(pos) {
     L.esri.Geocoding.reverseGeocode({
         apikey: ARCGIStkn
@@ -148,93 +142,13 @@ const addressSearchControl = L.control.addressSearch(key, {
 });
 map.addControl(addressSearchControl);
 
-/* Hef ekki þörf fyrir Geoplaces eins og er. Nota það hugsanlega í framtíðinni
-//Geoplaces
-const layerGroup = L.layerGroup().addTo(map);
-
-const control = document.getElementById("place-control");
-const input = document.getElementById("search-input");
-const placeKeywords = ["Restaurants", "Hotels", "Museums", "Gyms"];
-
-function showPlaces(text) {
-
-    layerGroup.clearLayers();
-
-    const bounds = map.getBounds();
-    const topRight = bounds.getNorthEast();
-    const bottomLeft = bounds.getSouthWest();
-
-    arcgisRest.findPlacesWithinExtent({
-        xmin: bottomLeft.lng,
-        ymin: bottomLeft.lat,
-        xmax: topRight.lng,
-        ymax: topRight.lat,
-        searchText: text,
-        authentication
-    })
-    .then((response) => {
-          response.results.forEach((result) => {
-            const placesMarker = L.marker([result.location.y, result.location.x],{icon: markerIcon}).addTo(layerGroup);
-
-            placesMarker.id = result.placeId;
-            console.log(result)
-            console.log(result.location.y, result.location.x, result.name)
-
-            placesMarker.bindPopup(getDetails, {
-                minWidth: 200,
-            });            
-        });
-    });
-
-    function getDetails(place) {
-        const popup = document.createElement("div");
-
-        arcgisRest.getPlaceDetails(({
-        placeId: place.id,
-        authentication,
-        requestedFields: ["name", "address:streetAddress", "contactInfo:telephone"]
-    }))
-    .then((result) => {
-        let popupContents = `<b>${result.placeDetails.name}</b><br>`;
-        if (result.placeDetails.address.streetAddress) {popupContents += `${result.placeDetails.address.streetAddress}<br>`} else { popupContents += "Ekkert heimilisfang fannst <br>"};
-        if (result.placeDetails.contactInfo.telephone) {popupContents += `${result.placeDetails.contactInfo.telephone}`} else{ popupContents += "Ekkert símanúmer fannst"}
-        console.log(result.placeDetails.address.streetAddress)
-
-        popup.innerHTML = popupContents;
-    });
-
-        return popup;
-    };
-};
-
-document.getElementById("search-button").addEventListener("click", () => {
-    showPlaces(input.value);
-});
-
-placeKeywords.forEach((category) => {
-    const categoryButton = L.DomUtil.create("calcite-button", "category-button");
-    categoryButton.setAttribute("round", true);
-    categoryButton.setAttribute("scale", "s");
-    categoryButton.setAttribute("kind", "inverse");
-    categoryButton.setAttribute("margin", "2px")
-    categoryButton.innerHTML = category;
-    categoryButton.id = category;
-    control.appendChild(categoryButton);
-
-    categoryButton.addEventListener("click", function() {
-        input.value = category;
-        showPlaces(category);
-    });
-
-});
-*/
 
 //Takki til að hreinsa út alla núverandi markera!
 function clearMarkers() {
     markerLayerGroup.clearLayers();
 }
 
-//Decluttering!
+//Decluttering! - Kemur seinna
 map.on("zoomstart", function(){
     console.log(map.getZoom())
 
