@@ -155,34 +155,3 @@ layerControl.addOverlay(OBLayer, "ÓB")
 layerControl.addOverlay(orkanLayer, "Orkan")
 layerControl.addOverlay(atlantsoliaLayer, "AtlantsOlía")
 layerControl.addOverlay(costcoLayer, "Costco")
-
-
-//Verð sortari -----------------------------------------------
-const gasPricesArr = [];
-const dieselPricesArr = [];
-
-async function priceSorter() {
-    const getPrices = await fetch ("js/prices.json")
-    const pricesFetched = await getPrices.json()
-
-    for (let prices of pricesFetched){
-        const gasPrice = prices.bensin_price + " " + prices.station + " " + prices.address
-        const dieselPrice = prices.disel_price + " " + prices.station + " " + prices.address
-        
-        gasPricesArr.push(gasPrice)
-        dieselPricesArr.push(dieselPrice)
-    }
-}
-priceSorter();
-
-const gasSorter = gasPricesArr.sort((a,b) => a - b)
-const dieselSorter = dieselPricesArr.sort((a,b) => a - b)
-
-const sorterDiv = document.getElementById("cheapestPrices")
-
-for (i in gasPricesArr){
-    document.getElementById("gas"[i]).value =  gasPricesArr[i]
-}
-
-console.log(gasSorter)
-console.log(dieselSorter)

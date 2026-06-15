@@ -142,6 +142,42 @@ const addressSearchControl = L.control.addressSearch(key, {
 });
 map.addControl(addressSearchControl);
 
+//Verð sortari -----------------------------------------------
+const gasPricesArr = [];
+const dieselPricesArr = [];
+
+async function priceSorter() {
+    const getPrices = await fetch ("js/prices.json")
+    const pricesFetched = await getPrices.json()
+
+    for (let prices of pricesFetched){
+        const gasPrice = prices.bensin_price + " " + prices.station + " " + prices.address
+        const dieselPrice = prices.disel_price + " " + prices.station + " " + prices.address
+        
+        gasPricesArr.push(gasPrice)
+        dieselPricesArr.push(dieselPrice)
+    }
+}
+priceSorter();
+
+const gasSorter = gasPricesArr.sort((a,b) => a - b)
+const dieselSorter = dieselPricesArr.sort((a,b) => a - b)
+
+console.log(gasSorter)
+console.log(dieselSorter)
+
+const gas1 = document.getElementById("gas1")
+const gas2 = document.getElementById("gas2")
+const gas3 = document.getElementById("gas3")
+const gas4 = document.getElementById("gas4")
+const gas5 = document.getElementById("gas5")
+
+gas1.textContent = gasSorter[0]
+console.log(gasSorter(1))
+
+
+//-------------------------------------------------------------
+
 
 //Takki til að hreinsa út alla núverandi markera!
 function clearMarkers() {
