@@ -151,29 +151,37 @@ async function priceSorter() {
     const pricesFetched = await getPrices.json()
 
     for (let prices of pricesFetched){
-        const gasPrice = prices.bensin_price + " " + prices.station + " " + prices.address
-        const dieselPrice = prices.disel_price + " " + prices.station + " " + prices.address
-        
-        gasPricesArr.push(gasPrice)
-        dieselPricesArr.push(dieselPrice)
+        gasPricesArr.push({
+            price: prices.bensin_price,
+            station: prices.station,
+            address: prices.address
+        });
+
+        dieselPricesArr.push({
+            price: prices.diesel_price,
+            station: prices.station,
+            address: prices.address
+        });
     }
+
+    const gasSorter = gasPricesArr.sort((a,b) => a - b)
+    const dieselSorter = dieselPricesArr.sort((a,b) => a - b)
+
+    document.getElementById("gas1").textContent =" " + `${gasPricesArr[0].price} kr. - ${gasPricesArr[0].station} - ${gasPricesArr[0].address}`;
+
+    document.getElementById("gas2").textContent =" " + `${gasPricesArr[1].price} kr. - ${gasPricesArr[1].station} - ${gasPricesArr[1].address}`;
+
+    document.getElementById("gas3").textContent =" " + `${gasPricesArr[2].price} kr. - ${gasPricesArr[2].station} - ${gasPricesArr[2].address}`;
+
+    document.getElementById("gas4").textContent =" " + `${gasPricesArr[3].price} kr. - ${gasPricesArr[3].station} - ${gasPricesArr[3].address}`;
+
+    document.getElementById("gas5").textContent =" " + `${gasPricesArr[4].price} kr. - ${gasPricesArr[4].station} - ${gasPricesArr[4].address}`;
+
+    console.log("Dýrasta bensínið:", gasPricesArr.at(-1)); 
+
+
 }
 priceSorter();
-
-const gasSorter = gasPricesArr.sort((a,b) => a - b)
-const dieselSorter = dieselPricesArr.sort((a,b) => a - b)
-
-console.log(gasSorter)
-console.log(dieselSorter)
-
-const gas1 = document.getElementById("gas1")
-const gas2 = document.getElementById("gas2")
-const gas3 = document.getElementById("gas3")
-const gas4 = document.getElementById("gas4")
-const gas5 = document.getElementById("gas5")
-
-gas1.textContent = gasSorter[0]
-console.log(gasSorter(1))
 
 
 //-------------------------------------------------------------
