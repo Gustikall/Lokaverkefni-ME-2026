@@ -161,16 +161,13 @@ layerControl.addOverlay(costcoLayer, "Costco")
 const gasPricesArr = [];
 const dieselPricesArr = [];
 
-const newGasPricesArr = [];
-const newDieselPricesArr = [];
-
 async function priceSorter() {
     const getPrices = await fetch ("js/prices.json")
     const pricesFetched = await getPrices.json()
 
     for (let prices of pricesFetched){
-        const gasPrice = prices.bensin_price
-        const dieselPrice = prices.disel_price
+        const gasPrice = prices.bensin_price + " " + prices.station + " " + prices.address
+        const dieselPrice = prices.disel_price + " " + prices.station + " " + prices.address
         
         gasPricesArr.push(gasPrice)
         dieselPricesArr.push(dieselPrice)
@@ -178,12 +175,7 @@ async function priceSorter() {
 }
 priceSorter();
 
-function sorter(a,b){
-    b-a;
-    newGasPricesArr.push(b)
-}
-
-for (i in gasPricesArr){
-    sorter(gasPricesArr[i], gasPricesArr[-1])
-}
-console.log(newGasPricesArr)
+const gasSorter = gasPricesArr.sort((a,b) => a - b)
+const dieselSorter = dieselPricesArr.sort((a,b) => a - b)
+console.log(gasSorter)
+console.log(dieselSorter)
