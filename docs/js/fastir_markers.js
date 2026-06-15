@@ -177,5 +177,12 @@ priceSorter();
 
 const gasSorter = gasPricesArr.sort((a,b) => a - b)
 const dieselSorter = dieselPricesArr.sort((a,b) => a - b)
+
+const sorterDiv = document.getElementById("cheapestPrices")
+
+for (i in gasPricesArr){
+    document.getElementById("gas"[i]).value =  gasPricesArr[i]
+}
+
 console.log(gasSorter)
 console.log(dieselSorter)
