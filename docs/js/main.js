@@ -16,6 +16,9 @@ L.DomEvent.disableClickPropagation(noMouseClickingAroundThesePartsOfTown);
 const thereAintNothingButGoddamnedErrorsAround = document.getElementById("infobar");
 L.DomEvent.disableClickPropagation(thereAintNothingButGoddamnedErrorsAround)
 
+const anotherGenericAndLongVariableNameForDisablingClickPropagation = document.getElementById("cheapestPrices");
+L.DomEvent.disableClickPropagation(anotherGenericAndLongVariableNameForDisablingClickPropagation)
+
 //const genericVariableName = document.getElementById("place-control");
 //L.DomEvent.disableClickPropagation(genericVariableName)
 
