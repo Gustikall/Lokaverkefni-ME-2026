@@ -161,7 +161,7 @@ async function priceSorter() {
         });
 
         dieselPricesArr.push({
-            price: prices.diesel_price,
+            price: prices.disel_price,
             station: prices.station,
             address: prices.address
         });
@@ -180,8 +180,17 @@ async function priceSorter() {
 
     document.getElementById("gas5").textContent =" " + `${gasPricesArr[4].price} kr. - ${gasPricesArr[4].station} - ${gasPricesArr[4].address}`;
 
-    console.log("Dýrasta bensínið:", gasPricesArr.at(-1)); 
+    //-------------------------------------------------------------------------------------------------------------------------------------------------------
 
+    document.getElementById("diesel1").textContent =" " + `${dieselPricesArr[0].price} kr. - ${dieselPricesArr[0].station} - ${dieselPricesArr[0].address}`;
+
+    document.getElementById("diesel2").textContent =" " + `${dieselPricesArr[1].price} kr. - ${dieselPricesArr[1].station} - ${dieselPricesArr[1].address}`;
+
+    document.getElementById("diesel3").textContent =" " + `${dieselPricesArr[2].price} kr. - ${dieselPricesArr[2].station} - ${dieselPricesArr[2].address}`;
+
+    document.getElementById("diesel4").textContent =" " + `${dieselPricesArr[3].price} kr. - ${dieselPricesArr[3].station} - ${dieselPricesArr[3].address}`;
+
+    document.getElementById("diesel5").textContent =" " + `${dieselPricesArr[4].price} kr. - ${dieselPricesArr[4].station} - ${dieselPricesArr[4].address}`;
 
 }
 priceSorter();

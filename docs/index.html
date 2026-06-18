@@ -27,7 +27,7 @@
 
     <link href="src/output.css" rel="stylesheet">
 </head>
-<body id="kortið" class="w-screen h-screen m-0 p-0 relative flex flex-col">
+<body class="w-screen h-screen m-0 p-0 relative flex">
 
 <!--Geoplaces. Hef ekki þörf á því eins og er-->
 <!--
@@ -45,7 +45,32 @@
       </div>
     </div>
 -->
-    <div id="cheapestPrices" class="w-64 absolute top-23 left-15 bg-transparent z">
+    <div id="kortið" class="w-11/12 h-screen m-0 p-0 relative flex flex-col">
+
+        <div id="questionMark" class="absolute bottom-15 right-15 z group/lequestion">
+
+            <div class="relative w-full h-full">
+                <img src="img/questionmark.png" class="w-10 h-10">
+                <span class="w-36 bottom-full left-1/2 -translate-x-1/2 absolute
+                invisible group-hover/lequestion:visible
+                bg-cyan-400 rounded-lg text-md text-black font-bold
+                p-2"
+                >ATH! Það gæti vantað einhverjar niðurstöður.</span>
+            </div>
+
+        </div>
+
+        <!--<div id="clearMarkersButton" class="absolute left-1 top-1 z">
+            <button class="bg-red-600 h-14 w-14 mt-2 ml-1 rounded-2xl cursor-pointer" onclick="clearMarkers()">Clear<br>Markers</button>
+        </div>-->
+        <div id="infobar" class="absolute bottom-0 left-0 right-0 bg-transparent text-fuchsia-400 mt-auto w-full h-4 z justify-center flex cursor-default">
+            <p> Ef einhverjar upplýsingar eru rangar má endilega senda tölvupóst á agustmar56@gmail.com. Birt með fyrirvara um breytingar</p>
+        </div>
+
+
+    </div>
+
+    <div id="cheapestPrices" class="bg-transparent z flex flex-row">
         <div id="gas" class="w-1/2 h-full border-2">
             <p id="gas1" class="sorterP"></p>
             <p id="gas2" class="sorterP"></p>
@@ -53,7 +78,7 @@
             <p id="gas4" class="sorterP"></p>
             <p id="gas5" class="sorterP"></p>
         </div>
-        
+            
         <div id="diesel" class="w-1/2">
             <p id="diesel1" class="sorterP"></p>
             <p id="diesel2" class="sorterP"></p>
@@ -63,25 +88,6 @@
         </div>
     </div>
 
-    <div id="questionMark" class="absolute bottom-15 right-15 z group/lequestion">
-
-        <div class="relative w-full h-full">
-            <img src="img/questionmark.png" class="w-10 h-10">
-            <span class="w-36 bottom-full left-1/2 -translate-x-1/2 absolute
-            invisible group-hover/lequestion:visible
-            bg-cyan-400 rounded-lg text-md text-black font-bold
-            p-2"
-            >ATH! Það gæti vantað einhverjar niðurstöður.</span>
-        </div>
-
-    </div>
-
-    <!--<div id="clearMarkersButton" class="absolute left-1 top-1 z">
-        <button class="bg-red-600 h-14 w-14 mt-2 ml-1 rounded-2xl cursor-pointer" onclick="clearMarkers()">Clear<br>Markers</button>
-    </div>-->
-    <div id="infobar" class="bg-white mt-auto w-full h-4 z justify-center flex cursor-default">
-        <p> Ef einhverjar upplýsingar eru rangar má endilega senda tölvupóst á agustmar56@gmail.com. Birt með fyrirvara um breytingar</p>
-    </div>
 
     <!--<script src="/docs/js/prices.json"></script>-->
     <script src="js/main.js"></script>

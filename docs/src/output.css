@@ -9,6 +9,7 @@
       "Courier New", monospace;
     --color-red-600: oklch(57.7% 0.245 27.325);
     --color-cyan-400: oklch(78.9% 0.154 211.53);
+    --color-fuchsia-400: oklch(74% 0.238 322.16);
     --color-black: #000;
     --color-white: #fff;
     --spacing: 0.25rem;
@@ -189,26 +190,26 @@
   .top-8 {
     top: calc(var(--spacing) * 8);
   }
-  .top-15 {
-    top: calc(var(--spacing) * 15);
-  }
-  .top-20 {
-    top: calc(var(--spacing) * 20);
-  }
-  .top-22 {
-    top: calc(var(--spacing) * 22);
-  }
   .top-23 {
     top: calc(var(--spacing) * 23);
   }
+  .right-0 {
+    right: calc(var(--spacing) * 0);
+  }
   .right-15 {
     right: calc(var(--spacing) * 15);
+  }
+  .bottom-0 {
+    bottom: calc(var(--spacing) * 0);
   }
   .bottom-15 {
     bottom: calc(var(--spacing) * 15);
   }
   .bottom-full {
     bottom: 100%;
+  }
+  .left-0 {
+    left: calc(var(--spacing) * 0);
   }
   .left-1 {
     left: calc(var(--spacing) * 1);
@@ -221,9 +222,6 @@
   }
   .m-0 {
     margin: calc(var(--spacing) * 0);
-  }
-  .m-auto {
-    margin: auto;
   }
   .mt-2 {
     margin-top: calc(var(--spacing) * 2);
@@ -255,9 +253,6 @@
   .h-14 {
     height: calc(var(--spacing) * 14);
   }
-  .h-48 {
-    height: calc(var(--spacing) * 48);
-  }
   .h-full {
     height: 100%;
   }
@@ -273,50 +268,26 @@
   .w-10 {
     width: calc(var(--spacing) * 10);
   }
+  .w-11 {
+    width: calc(var(--spacing) * 11);
+  }
+  .w-11\/12 {
+    width: calc(11/12 * 100%);
+  }
   .w-14 {
     width: calc(var(--spacing) * 14);
-  }
-  .w-24 {
-    width: calc(var(--spacing) * 24);
   }
   .w-36 {
     width: calc(var(--spacing) * 36);
   }
-  .w-48 {
-    width: calc(var(--spacing) * 48);
-  }
   .w-64 {
     width: calc(var(--spacing) * 64);
-  }
-  .w-96 {
-    width: calc(var(--spacing) * 96);
-  }
-  .w-auto {
-    width: auto;
-  }
-  .w-fit {
-    width: fit-content;
   }
   .w-full {
     width: 100%;
   }
   .w-screen {
     width: 100vw;
-  }
-  .max-w-5 {
-    max-width: calc(var(--spacing) * 5);
-  }
-  .max-w-36 {
-    max-width: calc(var(--spacing) * 36);
-  }
-  .max-w-48 {
-    max-width: calc(var(--spacing) * 48);
-  }
-  .max-w-fit {
-    max-width: fit-content;
-  }
-  .min-w-fit {
-    min-width: fit-content;
   }
   .border-collapse {
     border-collapse: collapse;
@@ -385,6 +356,9 @@
   }
   .text-black {
     color: var(--color-black);
+  }
+  .text-fuchsia-400 {
+    color: var(--color-fuchsia-400);
   }
   .underline {
     text-decoration-line: underline;
