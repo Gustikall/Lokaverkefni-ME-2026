@@ -16,7 +16,7 @@ L.DomEvent.disableClickPropagation(noMouseClickingAroundThesePartsOfTown);
 const thereAintNothingButGoddamnedErrorsAround = document.getElementById("infobar");
 L.DomEvent.disableClickPropagation(thereAintNothingButGoddamnedErrorsAround)
 
-const anotherGenericAndLongVariableNameForDisablingClickPropagation = document.getElementById("cheapestPrices");
+const anotherGenericAndLongVariableNameForDisablingClickPropagation = document.getElementById("gasPrices");
 L.DomEvent.disableClickPropagation(anotherGenericAndLongVariableNameForDisablingClickPropagation)
 
 //const genericVariableName = document.getElementById("place-control");
@@ -170,6 +170,7 @@ async function priceSorter() {
     const gasSorter = gasPricesArr.sort((a,b) => a - b)
     const dieselSorter = dieselPricesArr.sort((a,b) => a - b)
 
+    /*
     document.getElementById("gas1").textContent =" " + `${gasPricesArr[0].price} kr. - ${gasPricesArr[0].station} - ${gasPricesArr[0].address}`;
 
     document.getElementById("gas2").textContent =" " + `${gasPricesArr[1].price} kr. - ${gasPricesArr[1].station} - ${gasPricesArr[1].address}`;
@@ -191,7 +192,7 @@ async function priceSorter() {
     document.getElementById("diesel4").textContent =" " + `${dieselPricesArr[3].price} kr. - ${dieselPricesArr[3].station} - ${dieselPricesArr[3].address}`;
 
     document.getElementById("diesel5").textContent =" " + `${dieselPricesArr[4].price} kr. - ${dieselPricesArr[4].station} - ${dieselPricesArr[4].address}`;
-
+    */
 }
 priceSorter();
 
