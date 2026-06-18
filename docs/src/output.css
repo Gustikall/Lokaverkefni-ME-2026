@@ -11,7 +11,6 @@
     --color-cyan-400: oklch(78.9% 0.154 211.53);
     --color-fuchsia-400: oklch(74% 0.238 322.16);
     --color-black: #000;
-    --color-white: #fff;
     --spacing: 0.25rem;
     --font-weight-bold: 700;
     --radius-lg: 0.5rem;
@@ -190,9 +189,6 @@
   .top-8 {
     top: calc(var(--spacing) * 8);
   }
-  .top-23 {
-    top: calc(var(--spacing) * 23);
-  }
   .right-0 {
     right: calc(var(--spacing) * 0);
   }
@@ -216,9 +212,6 @@
   }
   .left-1\/2 {
     left: calc(1/2 * 100%);
-  }
-  .left-15 {
-    left: calc(var(--spacing) * 15);
   }
   .m-0 {
     margin: calc(var(--spacing) * 0);
@@ -268,20 +261,20 @@
   .w-10 {
     width: calc(var(--spacing) * 10);
   }
-  .w-11 {
-    width: calc(var(--spacing) * 11);
-  }
-  .w-11\/12 {
-    width: calc(11/12 * 100%);
+  .w-12 {
+    width: calc(var(--spacing) * 12);
   }
   .w-14 {
     width: calc(var(--spacing) * 14);
   }
+  .w-16 {
+    width: calc(var(--spacing) * 16);
+  }
+  .w-24 {
+    width: calc(var(--spacing) * 24);
+  }
   .w-36 {
     width: calc(var(--spacing) * 36);
-  }
-  .w-64 {
-    width: calc(var(--spacing) * 64);
   }
   .w-full {
     width: 100%;
@@ -308,9 +301,6 @@
   }
   .resize {
     resize: both;
-  }
-  .flex-col {
-    flex-direction: column;
   }
   .flex-row {
     flex-direction: row;
@@ -340,9 +330,6 @@
   }
   .bg-transparent {
     background-color: transparent;
-  }
-  .bg-white {
-    background-color: var(--color-white);
   }
   .p-0 {
     padding: calc(var(--spacing) * 0);
@@ -423,6 +410,9 @@
 }
 .superLeft {
   left: 410px;
+}
+.veryWide {
+  width: 98%;
 }
 @property --tw-translate-x {
   syntax: "*";
