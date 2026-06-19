@@ -196,11 +196,13 @@ async function priceSorter() {
 }
 priceSorter();
 
-const hamburgerButton = document.getElementById("hamburgerMenu")
-const priceASC = document.getElementById("gasPrices")
+const hamburgerButton = document.getElementById("hamburgerMenu");
+const priceASC = document.getElementById("gasPrices");
+let burgerMenuCounter = 1;
 
 hamburgerButton.addEventListener("click", function(){
-    priceASC.classList.remove("sudoInvisible")    
+    burgerMenuCounter % 2 === 0 ? priceASC.classList.add("sudoInvisible") : priceASC.classList.remove("sudoInvisible")
+    burgerMenuCounter ++
 })
 
 
