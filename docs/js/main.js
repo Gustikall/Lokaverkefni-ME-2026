@@ -196,6 +196,13 @@ async function priceSorter() {
 }
 priceSorter();
 
+const hamburgerButton = document.getElementById("hamburgerMenu")
+const priceASC = document.getElementById("cheapestPrices")
+
+hamburgerButton.addEventListener("click", function(){
+    priceASC.removeAttribute = "invisible"
+})
+
 
 //-------------------------------------------------------------
 
