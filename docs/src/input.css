@@ -50,3 +50,7 @@
 .veryWide{
   width: 98%;
 }
+
+.sudoInvisible{
+  display: none;
+}
