@@ -176,7 +176,12 @@ async function priceSorter() {
     document.getElementById("gas3").textContent =" " + `${gasPricesArr[2].price} kr. - ${gasPricesArr[2].station} - ${gasPricesArr[2].address}`;
     document.getElementById("gas4").textContent =" " + `${gasPricesArr[3].price} kr. - ${gasPricesArr[3].station} - ${gasPricesArr[3].address}`;
     document.getElementById("gas5").textContent =" " + `${gasPricesArr[4].price} kr. - ${gasPricesArr[4].station} - ${gasPricesArr[4].address}`;
-
+    document.getElementById("gas6").textContent =" " + `${gasPricesArr[5].price} kr. - ${gasPricesArr[5].station} - ${gasPricesArr[5].address}`;
+    document.getElementById("gas7").textContent =" " + `${gasPricesArr[6].price} kr. - ${gasPricesArr[6].station} - ${gasPricesArr[6].address}`;
+    document.getElementById("gas8").textContent =" " + `${gasPricesArr[7].price} kr. - ${gasPricesArr[7].station} - ${gasPricesArr[7].address}`;
+    document.getElementById("gas9").textContent =" " + `${gasPricesArr[8].price} kr. - ${gasPricesArr[8].station} - ${gasPricesArr[8].address}`;
+    document.getElementById("gas10").textContent =" " + `${gasPricesArr[9].price} kr. - ${gasPricesArr[9].station} - ${gasPricesArr[9].address}`;
+    
     //-------------------------------------------------------------------------------------------------------------------------------------------------------
 
     document.getElementById("diesel1").textContent =" " + `${dieselPricesArr[0].price} kr. - ${dieselPricesArr[0].station} - ${dieselPricesArr[0].address}`;
@@ -184,6 +189,11 @@ async function priceSorter() {
     document.getElementById("diesel3").textContent =" " + `${dieselPricesArr[2].price} kr. - ${dieselPricesArr[2].station} - ${dieselPricesArr[2].address}`;
     document.getElementById("diesel4").textContent =" " + `${dieselPricesArr[3].price} kr. - ${dieselPricesArr[3].station} - ${dieselPricesArr[3].address}`;
     document.getElementById("diesel5").textContent =" " + `${dieselPricesArr[4].price} kr. - ${dieselPricesArr[4].station} - ${dieselPricesArr[4].address}`;
+    document.getElementById("diesel6").textContent =" " + `${dieselPricesArr[5].price} kr. - ${dieselPricesArr[5].station} - ${dieselPricesArr[5].address}`;
+    document.getElementById("diesel7").textContent =" " + `${dieselPricesArr[6].price} kr. - ${dieselPricesArr[6].station} - ${dieselPricesArr[6].address}`;
+    document.getElementById("diesel8").textContent =" " + `${dieselPricesArr[7].price} kr. - ${dieselPricesArr[7].station} - ${dieselPricesArr[7].address}`;
+    document.getElementById("diesel9").textContent =" " + `${dieselPricesArr[8].price} kr. - ${dieselPricesArr[8].station} - ${dieselPricesArr[8].address}`;
+    document.getElementById("diesel10").textContent =" " + `${dieselPricesArr[9].price} kr. - ${dieselPricesArr[9].station} - ${dieselPricesArr[9].address}`;
     
 }
 priceSorter();

@@ -191,9 +191,6 @@
   .top-8 {
     top: calc(var(--spacing) * 8);
   }
-  .top-25 {
-    top: calc(var(--spacing) * 25);
-  }
   .top-26 {
     top: calc(var(--spacing) * 26);
   }
@@ -224,8 +221,8 @@
   .left-3 {
     left: calc(var(--spacing) * 3);
   }
-  .left-25 {
-    left: calc(var(--spacing) * 25);
+  .left-20 {
+    left: calc(var(--spacing) * 20);
   }
   .m-0 {
     margin: calc(var(--spacing) * 0);
@@ -308,6 +305,13 @@
   }
   .rounded-lg {
     border-radius: var(--radius-lg);
+  }
+  .border-2 {
+    border-style: var(--tw-border-style);
+    border-width: 2px;
+  }
+  .bg-black {
+    background-color: var(--color-black);
   }
   .bg-cyan-400 {
     background-color: var(--color-cyan-400);
@@ -413,7 +417,9 @@
   display: none;
 }
 .sorterP {
-  font: normal semibold 6px/1.2, sans-serif;
+  font-size: 12px;
+  font-weight: bold;
+  color: white;
 }
 @property --tw-translate-x {
   syntax: "*";
@@ -429,6 +435,11 @@
   syntax: "*";
   inherits: false;
   initial-value: 0;
+}
+@property --tw-border-style {
+  syntax: "*";
+  inherits: false;
+  initial-value: solid;
 }
 @property --tw-gradient-position {
   syntax: "*";
@@ -482,6 +493,7 @@
       --tw-translate-x: 0;
       --tw-translate-y: 0;
       --tw-translate-z: 0;
+      --tw-border-style: solid;
       --tw-gradient-position: initial;
       --tw-gradient-from: #0000;
       --tw-gradient-via: #0000;
