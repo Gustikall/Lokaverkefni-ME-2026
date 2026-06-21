@@ -54,3 +54,7 @@
 .sudoInvisible{
   display: none;
 }
+
+.sorterP{
+  font: normal semibold 6px/1.2, sans-serif;
+}
