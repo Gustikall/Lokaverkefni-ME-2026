@@ -294,9 +294,6 @@
   .cursor-pointer {
     cursor: pointer;
   }
-  .flex-row {
-    flex-direction: row;
-  }
   .justify-center {
     justify-content: center;
   }
@@ -417,6 +414,9 @@
   display: none;
 }
 .sorterP {
+  display: grid;
+  grid-template-columns: 250px 230px 1fr;
+  margin: 0;
   font-size: 12px;
   font-weight: bold;
   color: white;

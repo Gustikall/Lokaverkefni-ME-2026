@@ -181,7 +181,7 @@ async function priceSorter() {
     document.getElementById("gas8").textContent =" " + `${gasPricesArr[7].price} kr. - ${gasPricesArr[7].station} - ${gasPricesArr[7].address}`;
     document.getElementById("gas9").textContent =" " + `${gasPricesArr[8].price} kr. - ${gasPricesArr[8].station} - ${gasPricesArr[8].address}`;
     document.getElementById("gas10").textContent =" " + `${gasPricesArr[9].price} kr. - ${gasPricesArr[9].station} - ${gasPricesArr[9].address}`;
-    
+
     //-------------------------------------------------------------------------------------------------------------------------------------------------------
 
     document.getElementById("diesel1").textContent =" " + `${dieselPricesArr[0].price} kr. - ${dieselPricesArr[0].station} - ${dieselPricesArr[0].address}`;
@@ -198,13 +198,20 @@ async function priceSorter() {
 }
 priceSorter();
 
+sorterP.innerHTML = `
+    <span class="price">${price}</span>
+    <span class="brand">${brand}</span>
+    <span class="location">${location}</span>
+`;
+
 const hamburgerButton = document.getElementById("hamburgerMenu");
 const priceASC = document.getElementById("gasPrices");
+const sorterPE = document.getElementById("sorterP")
 let burgerMenuCounter = 1;
 
 hamburgerButton.addEventListener("click", function(){
     burgerMenuCounter % 2 === 0 ? priceASC.classList.add("sudoInvisible") : priceASC.classList.remove("sudoInvisible")
-    burgerMenuCounter ++
+    burgerMenuCounter ++  
 })
 
 
