@@ -170,7 +170,15 @@ async function priceSorter() {
     const gasSorter = gasPricesArr.sort((a,b) => a - b)
     const dieselSorter = dieselPricesArr.sort((a,b) => a - b)
 
-    
+    /*
+    const sorterGas = document.getElementById("sorterGas")
+    const sorterDiesel = document.getElementById("sorterDiesel")
+    sorterGas.innerHTML = `
+        <span class="price">${price}</span>
+        <span class="brand">${brand}</span>
+        <span class="location">${location}</span>
+    `;
+    */
     document.getElementById("gas1").textContent =" " + `${gasPricesArr[0].price} kr. - ${gasPricesArr[0].station} - ${gasPricesArr[0].address}`;
     document.getElementById("gas2").textContent =" " + `${gasPricesArr[1].price} kr. - ${gasPricesArr[1].station} - ${gasPricesArr[1].address}`;
     document.getElementById("gas3").textContent =" " + `${gasPricesArr[2].price} kr. - ${gasPricesArr[2].station} - ${gasPricesArr[2].address}`;
@@ -198,20 +206,14 @@ async function priceSorter() {
 }
 priceSorter();
 
-sorterP.innerHTML = `
-    <span class="price">${price}</span>
-    <span class="brand">${brand}</span>
-    <span class="location">${location}</span>
-`;
-
 const hamburgerButton = document.getElementById("hamburgerMenu");
 const priceASC = document.getElementById("gasPrices");
-const sorterPE = document.getElementById("sorterP")
 let burgerMenuCounter = 1;
 
 hamburgerButton.addEventListener("click", function(){
     burgerMenuCounter % 2 === 0 ? priceASC.classList.add("sudoInvisible") : priceASC.classList.remove("sudoInvisible")
-    burgerMenuCounter ++  
+    burgerMenuCounter ++
+    console.log(burgerMenuCounter)
 })
 
 
