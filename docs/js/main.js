@@ -79,7 +79,7 @@ const maxMarkers = 10;
 const markersArray = [];
 
 
-
+//Basic Markerar
 const markerLayerGroup = L.layerGroup().addTo(map);
 const geocodeService = L.esri.Geocoding.geocodeService();
 
@@ -119,6 +119,8 @@ map.on("click", function(pos) {
     })
 })
 
+
+//Address Searcher
 const addressSearchControl = L.control.addressSearch(key, {
   position: 'topleft',
   className: "searchBar",
