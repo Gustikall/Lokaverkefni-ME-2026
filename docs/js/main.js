@@ -227,6 +227,18 @@ function clearMarkers() {
     markerLayerGroup.clearLayers();
 }
 
+//Navigator GeolocationAPI
+if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(pos => {
+        const lat = pos.coords.latitude
+        const lng = pos.coords.longitude
+
+        map.setView([lat,lng], zoomlevel)
+
+        L.marker([lat,lng],{icon:markerIcon}).addTo(map).bindPopup("Þú ert hér!").openPopup();
+    })
+}
+
 //Decluttering! - Kemur seinna
 map.on("zoomstart", function(){
     console.log(map.getZoom())
