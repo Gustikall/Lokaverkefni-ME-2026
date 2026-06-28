@@ -236,6 +236,11 @@ if (navigator.geolocation) {
         map.setView([lat,lng], zoomlevel)
 
         L.marker([lat,lng],{icon:markerIcon}).addTo(map).bindPopup("Þú ert hér!").openPopup();
+
+        L.circle([lat,lng], {
+            color: "blue",
+            radius: 2000,
+        }).addTo(map)
     })
 }
 

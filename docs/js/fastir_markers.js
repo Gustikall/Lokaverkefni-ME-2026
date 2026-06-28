@@ -137,7 +137,7 @@ function addMarker(info, coordinates) {
 const costcoMarker = L.marker([64.07545732729858, -21.915240883827213],{icon: costcoIcon})
     .bindPopup(`
         <strong>Costco - Kauptún 3</strong><br>
-        <strong>Bensín: 193.3, Dísel: 231.6</strong><br>
+        <strong>Bensín: 185.3, Dísel: 219.6</strong><br>
         <a href="${costcoLink}"target="_blank">Vefsíða</a><br>
         <strong>Símanúmer: ${costcoPhone}</strong>`
     ).addTo(costcoLayer);
