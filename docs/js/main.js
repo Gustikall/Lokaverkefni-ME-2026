@@ -246,13 +246,25 @@ if (navigator.geolocation) {
 
 //Decluttering! - Kemur seinna
 map.on("zoomstart", function(){
-    console.log(map.getZoom())
-    console.log(map.getBounds())
+    console.log(map.getZoom());
+    
+    const bounds = map.getBounds();
+    //North
+    const NE = bounds.getNorthEast();
+    const NW = bounds.getNorthWest();
+    //South
+    const SE = bounds.getSouthEast();
+    const SW = bounds.getSouthWest();
+    console.log("North", NE, NW, "South", SE, SW)
 
-    const getBounds = map.getBounds()
-    const testMarkerCords = [64.123, -21.7123]
-    const testMarker = L.marker(testMarkerCords, {icon:markerIcon, iconSize:[128,128]})//.bindPopup("Þetta virkaði!"))
-    if (testMarker.lat <= getBounds.lat && testMarker.lng <= getBounds.lat){
 
+    const testMarkerCordsLat = [64.12120610627507];
+    const testMarkerCordsLng = [-21.87060356140137]
+    const testMarker = L.marker([testMarkerCordsLat, testMarkerCordsLng], {icon:markerIcon, iconSize:[128,128]})//.bindPopup("Þetta virkaði! :-)"));
+
+    if (testMarkerCordsLat <= NW && testMarkerCordsLat >= SE && testMarkerCordsLng <= NW && testMarkerCordsLng >= SE){
+        testMarker.addTo(map)
+    } else{
+        console.log("Virkaði ekki!")
     }
 })
