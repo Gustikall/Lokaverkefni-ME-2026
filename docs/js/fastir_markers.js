@@ -20,6 +20,34 @@ async function loadData() {
 }
 loadData();
 
+function addMarker(info, coordinates) {
+
+    const key = info.station
+        .toLowerCase()
+        .normalize("NFD")
+        .replace(/[\u0300-\u036f]/g, "");
+
+    const icon = iconMap[key] || "N/A";
+    const layer = layerMap[key] || map;
+    const phone = phoneMap[key] || "N/A";
+    const link = linkMap[key] || "N/A";
+
+    const markerGas = L.marker(coordinates, { icon })
+        .bindPopup(`
+            <strong>${info.station} - ${info.address}</strong><br>
+            <strong>Bensín: ${info.bensin_price || "N/A"}, Dísel: ${info.disel_price || "N/A"}</strong><br>
+            <a href="${link}"target="_blank">Vefsíða</a><br>
+            <strong>Símanúmer: ${phone}</strong>
+        `)
+        .addTo(layer);
+        layer.addTo(map)
+
+        markerGas.on("click", function(e) {
+            const pos = markerGas.getLatLng();
+            map.setView(pos, zoomlevel)
+        })
+}
+
 const N1link = "https://n1.is/is";
 const orkanLink = "https://orkan.is/";
 const atlantsoliaLink = "https://www.atlantsolia.is/"
@@ -105,34 +133,6 @@ const layerMap = {
 }
 
 const zoomlevel = 14
-function addMarker(info, coordinates) {
-
-    const key = info.station
-        .toLowerCase()
-        .normalize("NFD")
-        .replace(/[\u0300-\u036f]/g, "");
-
-    const icon = iconMap[key] || "N/A";
-    const layer = layerMap[key] || map;
-
-    const phone = phoneMap[key] || "N/A";
-    const link = linkMap[key] || "N/A";
-
-    const markerGas = L.marker(coordinates, { icon })
-        .bindPopup(`
-            <strong>${info.station} - ${info.address}</strong><br>
-            <strong>Bensín: ${info.bensin_price || "N/A"}, Dísel: ${info.disel_price || "N/A"}</strong><br>
-            <a href="${link}"target="_blank">Vefsíða</a><br>
-            <strong>Símanúmer: ${phone}</strong>
-        `)
-        .addTo(layer);
-        layer.addTo(map)
-
-        markerGas.on("click", function(e) {
-            const pos = markerGas.getLatLng();
-            map.setView(pos, zoomlevel)
-        })
-}
 
 const costcoMarker = L.marker([64.07545732729858, -21.915240883827213],{icon: costcoIcon})
     .bindPopup(`

@@ -75,7 +75,7 @@ let marker = L.marker({
 })
 
 //Setur takmark á hversu margir markerar geta verið á kortinu. Fjarlægir gömlu punktana þegar þröskuldnum er náð
-const maxMarkers = 10;
+const maxMarkers = 1;
 const markersArray = [];
 
 
@@ -247,5 +247,12 @@ if (navigator.geolocation) {
 //Decluttering! - Kemur seinna
 map.on("zoomstart", function(){
     console.log(map.getZoom())
+    console.log(map.getBounds())
 
+    const getBounds = map.getBounds()
+    const testMarkerCords = [64.123, -21.7123]
+    const testMarker = L.marker(testMarkerCords, {icon:markerIcon, iconSize:[128,128]})//.bindPopup("Þetta virkaði!"))
+    if (testMarker.lat <= getBounds.lat && testMarker.lng <= getBounds.lat){
+
+    }
 })
