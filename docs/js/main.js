@@ -250,21 +250,21 @@ map.on("zoomstart", function(){
     
     const bounds = map.getBounds();
     //North
-    const NE = bounds.getNorthEast();
     const NW = bounds.getNorthWest();
+    const NWLat = NW.lat;
+    const NWLng = NW.lng;
     //South
     const SE = bounds.getSouthEast();
-    const SW = bounds.getSouthWest();
-    console.log("North", NE, NW, "South", SE, SW)
+    const SELat = SE.lat;
+    const SELng = SE.lng;
 
+    const testMarkerCordsLat = 64.12120610627507;
+    const testMarkerCordsLng = -21.87060356140137
+    const testMarker = L.marker([testMarkerCordsLat, testMarkerCordsLng], {icon:markerIcon, iconSize:[128,128]})//.addTo(map).bindPopup("Þetta virkaði! :-)");
 
-    const testMarkerCordsLat = [64.12120610627507];
-    const testMarkerCordsLng = [-21.87060356140137]
-    const testMarker = L.marker([testMarkerCordsLat, testMarkerCordsLng], {icon:markerIcon, iconSize:[128,128]})//.bindPopup("Þetta virkaði! :-)"));
-
-    if (testMarkerCordsLat <= NW && testMarkerCordsLat >= SE && testMarkerCordsLng <= NW && testMarkerCordsLng >= SE){
+    if (testMarkerCordsLat < NWLat && testMarkerCordsLat > SELat && testMarkerCordsLng < NWLng && testMarkerCordsLng > SELng){
         testMarker.addTo(map)
-    } else{
+    }else{
         console.log("Virkaði ekki!")
     }
 })
