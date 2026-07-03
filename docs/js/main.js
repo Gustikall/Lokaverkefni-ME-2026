@@ -245,7 +245,7 @@ if (navigator.geolocation) {
 }
 
 //Decluttering! - Kemur seinna
-map.on("zoomstart", function(){
+map.on("zoomend" && "moveend", function(){
     console.log(map.getZoom());
     
     const bounds = map.getBounds();
@@ -273,12 +273,8 @@ map.on("zoomstart", function(){
 
     if (testMarkerCordsLat  <= NWLat && testMarkerCordsLat >= SELat /*&& testMarkerCordsLng <= NWLng && testMarkerCordsLat <= NELat && testMarkerCordsLng <= NELng && testMarkerCordsLat >= SWLat && testMarkerCordsLng >= SWLng && testMarkerCordsLat >= SELat && testMarkerCordsLng >= SELng*/){
         testMarker.addTo(map).bindPopup("Þetta virkaði!")
+        console.log("Þetta virkaði!")
     }else{
         console.log("Virkaði ekki!")
-    }
-
-    if (testMarkerCordsLat >= NWLat && testMarkerCordsLat <= SELat){
-        testMarker.remove()
-        console.log("Marker fjarlæðgur")
     }
 })
