@@ -253,16 +253,24 @@ map.on("zoomstart", function(){
     const NW = bounds.getNorthWest();
     const NWLat = NW.lat;
     const NWLng = NW.lng;
+
+    const NE = bounds.getNorthEast();
+    const NELat = NE.lat;
+    const NELng = NE.lng;
     //South
+    const SW = bounds.getSouthWest();
+    const SWLat = SW.lat;
+    const SWLng = SW.lng;
+
     const SE = bounds.getSouthEast();
     const SELat = SE.lat;
     const SELng = SE.lng;
 
     const testMarkerCordsLat = 64.12120610627507;
     const testMarkerCordsLng = -21.87060356140137
-    const testMarker = L.marker([testMarkerCordsLat, testMarkerCordsLng], {icon:markerIcon, iconSize:[128,128]})//.addTo(map).bindPopup("Þetta virkaði! :-)");
+    const testMarker = L.marker([testMarkerCordsLat, testMarkerCordsLng], {icon:markerIcon, iconSize:[128,128]})//z.addTo(map).bindPopup("Þetta virkaði! :-)");
 
-    if (testMarkerCordsLat < NWLat && testMarkerCordsLat > SELat && testMarkerCordsLng < NWLng && testMarkerCordsLng > SELng){
+    if (testMarkerCordsLat <= NWLat && testMarkerCordsLat >= SELat && testMarkerCordsLng <= NWLng && testMarkerCordsLng >= SELng){
         testMarker.addTo(map)
     }else{
         console.log("Virkaði ekki!")
