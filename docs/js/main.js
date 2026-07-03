@@ -267,12 +267,18 @@ map.on("zoomstart", function(){
     const SELng = SE.lng;
 
     const testMarkerCordsLat = 64.12120610627507;
-    const testMarkerCordsLng = -21.87060356140137
-    const testMarker = L.marker([testMarkerCordsLat, testMarkerCordsLng], {icon:markerIcon, iconSize:[128,128]})//z.addTo(map).bindPopup("Þetta virkaði! :-)");
+    const testMarkerCordsLng = -21.87060356140137;
+    console.log(bounds)
+    const testMarker = L.marker([testMarkerCordsLat, testMarkerCordsLng], {icon:markerIcon, iconSize:[128,128]})
 
-    if (testMarkerCordsLat <= NWLat && testMarkerCordsLat >= SELat && testMarkerCordsLng <= NWLng && testMarkerCordsLng >= SELng){
-        testMarker.addTo(map)
+    if (testMarkerCordsLat  <= NWLat && testMarkerCordsLat >= SELat /*&& testMarkerCordsLng <= NWLng && testMarkerCordsLat <= NELat && testMarkerCordsLng <= NELng && testMarkerCordsLat >= SWLat && testMarkerCordsLng >= SWLng && testMarkerCordsLat >= SELat && testMarkerCordsLng >= SELng*/){
+        testMarker.addTo(map).bindPopup("Þetta virkaði!")
     }else{
         console.log("Virkaði ekki!")
+    }
+
+    if (testMarkerCordsLat >= NWLat && testMarkerCordsLat <= SELat){
+        testMarker.remove()
+        console.log("Marker fjarlæðgur")
     }
 })
