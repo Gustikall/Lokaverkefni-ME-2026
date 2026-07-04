@@ -277,4 +277,9 @@ map.on("zoomend" && "moveend", function(){
     }else{
         console.log("Virkaði ekki!")
     }
+
+    if (NWLat <= testMarkerCordsLat){
+        testMarker.remove();
+        console.log("Marker fjarlægður")
+    }
 })
