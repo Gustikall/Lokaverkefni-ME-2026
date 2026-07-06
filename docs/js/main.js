@@ -271,7 +271,7 @@ map.on("zoomend" && "moveend", function(){
     console.log(bounds)
     const testMarker = L.marker([testMarkerCordsLat, testMarkerCordsLng], {icon:markerIcon, iconSize:[128,128]})
 
-    if (testMarkerCordsLat  <= NWLat && testMarkerCordsLat >= SELat /*&& testMarkerCordsLng <= NWLng && testMarkerCordsLat <= NELat && testMarkerCordsLng <= NELng && testMarkerCordsLat >= SWLat && testMarkerCordsLng >= SWLng && testMarkerCordsLat >= SELat && testMarkerCordsLng >= SELng*/){
+    /*if (testMarkerCordsLat  <= NWLat && testMarkerCordsLat >= SELat //&& testMarkerCordsLng <= NWLng && testMarkerCordsLat <= NELat && testMarkerCordsLng <= NELng && testMarkerCordsLat >= SWLat && testMarkerCordsLng >= SWLng && testMarkerCordsLat >= SELat && testMarkerCordsLng >= SELng){
         testMarker.addTo(map).bindPopup("Þetta virkaði!")
         console.log("Þetta virkaði!")
     }else{
@@ -281,5 +281,5 @@ map.on("zoomend" && "moveend", function(){
     if (NWLat <= testMarkerCordsLat){
         testMarker.remove();
         console.log("Marker fjarlægður")
-    }
+    }*/
 })
