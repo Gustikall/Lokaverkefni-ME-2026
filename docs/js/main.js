@@ -239,7 +239,7 @@ if (navigator.geolocation) {
 
         L.circle([lat,lng], {
             color: "blue",
-            radius: 2000,
+            radius: 100,
         }).addTo(map)
     })
 }
