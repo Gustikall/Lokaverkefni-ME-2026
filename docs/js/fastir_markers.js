@@ -44,7 +44,7 @@ function addMarker(info, coordinates) {
 
         markerGas.on("click", function(e) {
             const pos = markerGas.getLatLng();
-            map.setView(pos, zoomlevel)
+            map.setView(pos)
         })
 }
 
