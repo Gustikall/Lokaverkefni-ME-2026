@@ -26,6 +26,9 @@ for url in urls:
 
 stations = {}
 
+sectionTbody = soup.find_all("tbody")
+print(sectionTbody)
+
 for soup in soups:
     fuel_types = [
         ("okt95", "bensin_price"),
@@ -61,5 +64,6 @@ data = list(stations.values())
 
 with open(outputFile, "w") as f:
     json.dump(data, f, ensure_ascii=False, indent=4)
+    print("123")
 
 
