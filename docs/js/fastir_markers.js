@@ -16,7 +16,6 @@ async function loadData() {
         const info = pricesData.find(p => p.id === cords.id);
 
         addMarker(info, coordinates);
-        console.log(info)
     }
 }
 loadData();
