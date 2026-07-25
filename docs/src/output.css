@@ -9,11 +9,15 @@
       "Courier New", monospace;
     --color-red-600: oklch(57.7% 0.245 27.325);
     --color-red-900: oklch(39.6% 0.141 25.723);
+    --color-red-950: oklch(25.8% 0.092 26.042);
+    --color-amber-300: oklch(87.9% 0.169 91.605);
+    --color-amber-500: oklch(76.9% 0.188 70.08);
     --color-cyan-400: oklch(78.9% 0.154 211.53);
     --color-sky-500: oklch(68.5% 0.169 237.323);
     --color-indigo-500: oklch(58.5% 0.233 277.117);
     --color-fuchsia-400: oklch(74% 0.238 322.16);
     --color-black: #000;
+    --color-white: #fff;
     --spacing: 0.25rem;
     --text-sm: 0.875rem;
     --text-sm--line-height: calc(1.25 / 0.875);
@@ -234,14 +238,23 @@
   .m-0 {
     margin: calc(var(--spacing) * 0);
   }
+  .m-1 {
+    margin: calc(var(--spacing) * 1);
+  }
   .mt-2 {
     margin-top: calc(var(--spacing) * 2);
   }
   .mt-auto {
     margin-top: auto;
   }
+  .mr-4 {
+    margin-right: calc(var(--spacing) * 4);
+  }
   .ml-1 {
     margin-left: calc(var(--spacing) * 1);
+  }
+  .ml-4 {
+    margin-left: calc(var(--spacing) * 4);
   }
   .contents {
     display: contents;
@@ -249,8 +262,14 @@
   .flex {
     display: flex;
   }
+  .grid {
+    display: grid;
+  }
   .hidden {
     display: none;
+  }
+  .table {
+    display: table;
   }
   .h-4 {
     height: calc(var(--spacing) * 4);
@@ -270,9 +289,6 @@
   .h-screen {
     height: 100vh;
   }
-  .w-1\/2 {
-    width: calc(1/2 * 100%);
-  }
   .w-8 {
     width: calc(var(--spacing) * 8);
   }
@@ -291,6 +307,13 @@
   .w-screen {
     width: 100vw;
   }
+  .border-collapse {
+    border-collapse: collapse;
+  }
+  .-translate-x-1 {
+    --tw-translate-x: calc(var(--spacing) * -1);
+    translate: var(--tw-translate-x) var(--tw-translate-y);
+  }
   .-translate-x-1\/2 {
     --tw-translate-x: calc(calc(1/2 * 100%) * -1);
     translate: var(--tw-translate-x) var(--tw-translate-y);
@@ -300,6 +323,15 @@
   }
   .cursor-pointer {
     cursor: pointer;
+  }
+  .resize {
+    resize: both;
+  }
+  .grid-flow-col-dense {
+    grid-auto-flow: column dense;
+  }
+  .grid-cols-\[240px_240px\] {
+    grid-template-columns: 240px 240px;
   }
   .justify-center {
     justify-content: center;
@@ -313,12 +345,26 @@
   .rounded-xl {
     border-radius: var(--radius-xl);
   }
+  .border {
+    border-style: var(--tw-border-style);
+    border-width: 1px;
+  }
   .border-2 {
     border-style: var(--tw-border-style);
     border-width: 2px;
   }
-  .bg-black {
-    background-color: var(--color-black);
+  .border-b-2 {
+    border-bottom-style: var(--tw-border-style);
+    border-bottom-width: 2px;
+  }
+  .border-white {
+    border-color: var(--color-white);
+  }
+  .bg-amber-300 {
+    background-color: var(--color-amber-300);
+  }
+  .bg-amber-500 {
+    background-color: var(--color-amber-500);
   }
   .bg-cyan-400 {
     background-color: var(--color-cyan-400);
@@ -328,6 +374,9 @@
   }
   .bg-red-900 {
     background-color: var(--color-red-900);
+  }
+  .bg-red-950 {
+    background-color: var(--color-red-950);
   }
   .bg-transparent {
     background-color: transparent;
@@ -367,6 +416,16 @@
   .text-fuchsia-400 {
     color: var(--color-fuchsia-400);
   }
+  .text-white {
+    color: var(--color-white);
+  }
+  .underline {
+    text-decoration-line: underline;
+  }
+  .outline {
+    outline-style: var(--tw-outline-style);
+    outline-width: 1px;
+  }
   .group-hover\/lequestion\:visible {
     &:is(:where(.group\/lequestion):hover *) {
       @media (hover: hover) {
@@ -398,7 +457,10 @@
   outline: none;
 }
 .z {
-  z-index: 9000;
+  z-index: 900;
+}
+.z2 {
+  z-index: 1000;
 }
 .leaflet-bar.searchBar {
   background-color: white;
@@ -433,7 +495,7 @@
 .sorterP {
   display: grid;
   grid-template-columns: 250px 230px 1fr;
-  margin: 0;
+  margin: 0 0 0 2px;
   font-size: 12px;
   font-weight: bold;
   color: white;
@@ -504,6 +566,11 @@
   syntax: "*";
   inherits: false;
 }
+@property --tw-outline-style {
+  syntax: "*";
+  inherits: false;
+  initial-value: solid;
+}
 @layer properties {
   @supports ((-webkit-hyphens: none) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color:rgb(from red r g b)))) {
     *, ::before, ::after, ::backdrop {
@@ -521,6 +588,7 @@
       --tw-gradient-via-position: 50%;
       --tw-gradient-to-position: 100%;
       --tw-font-weight: initial;
+      --tw-outline-style: solid;
     }
   }
 }

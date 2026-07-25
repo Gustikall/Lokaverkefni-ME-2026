@@ -14,7 +14,11 @@
 }
 
 .z{
-    z-index: 9000;
+    z-index: 900;
+}
+
+.z2{
+  z-index: 1000;
 }
 
 .leaflet-bar.searchBar{
@@ -59,7 +63,8 @@
 .sorterP{
   display: grid;
   grid-template-columns: 250px 230px 1fr;
-  margin: 0;
+  margin: 0 0 0 2px;
   font-size: 12px;
   font-weight: bold;
+  color: white;
 }
