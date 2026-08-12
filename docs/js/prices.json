@@ -675,7 +675,7 @@
         "station": "Orkan",
         "address": "Vík í Mýrdal",
         "bensin_price": "225.70",
-        "disel_price": "248.80",
+        "disel_price": "249.80",
         "id": "OrkanVík í Mýrdal"
     },
     {
@@ -703,14 +703,14 @@
         "station": "Orkan",
         "address": "Hveragerði",
         "bensin_price": "226.10",
-        "disel_price": "248.80",
+        "disel_price": "250.70",
         "id": "OrkanHveragerði"
     },
     {
         "station": "Orkan",
         "address": "Hveragerði, Sunnumörk",
         "bensin_price": "226.10",
-        "disel_price": "248.80",
+        "disel_price": "250.70",
         "id": "OrkanHveragerði, Sunnumörk"
     },
     {
@@ -1158,7 +1158,7 @@
         "station": "Orkan",
         "address": "Húsavík",
         "bensin_price": "226.10",
-        "disel_price": "249.80",
+        "disel_price": "250.70",
         "id": "OrkanHúsavík"
     },
     {
@@ -1578,14 +1578,14 @@
         "station": "Orkan",
         "address": "Akranes, Skagabraut",
         "bensin_price": "226.10",
-        "disel_price": "246.80",
+        "disel_price": "247.70",
         "id": "OrkanAkranes, Skagabraut"
     },
     {
         "station": "Orkan",
         "address": "Akranes, Smiðjuvöllum",
         "bensin_price": "226.10",
-        "disel_price": "246.80",
+        "disel_price": "247.70",
         "id": "OrkanAkranes, Smiðjuvöllum"
     },
     {
