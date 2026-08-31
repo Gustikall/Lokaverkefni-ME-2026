@@ -133,6 +133,41 @@
         "id": "N1Skógarlind"
     },
     {
+        "station": "ÓB",
+        "address": "Arnarsmári",
+        "bensin_price": "224.90",
+        "disel_price": "261.80",
+        "id": "ÓBArnarsmári"
+    },
+    {
+        "station": "ÓB",
+        "address": "Bæjarlind",
+        "bensin_price": "224.90",
+        "disel_price": "261.80",
+        "id": "ÓBBæjarlind"
+    },
+    {
+        "station": "ÓB",
+        "address": "Fjarðarkaup",
+        "bensin_price": "224.90",
+        "disel_price": "261.80",
+        "id": "ÓBFjarðarkaup"
+    },
+    {
+        "station": "ÓB",
+        "address": "Hamraborg",
+        "bensin_price": "224.90",
+        "disel_price": "261.80",
+        "id": "ÓBHamraborg"
+    },
+    {
+        "station": "ÓB",
+        "address": "Klöpp",
+        "bensin_price": "224.90",
+        "disel_price": "261.80",
+        "id": "ÓBKlöpp"
+    },
+    {
         "station": "Orkan",
         "address": "Birkimelur",
         "bensin_price": "227.10",
@@ -334,41 +369,6 @@
         "bensin_price": "227.20",
         "disel_price": "253.80",
         "id": "AtlantsolíaStarengi"
-    },
-    {
-        "station": "ÓB",
-        "address": "Arnarsmári",
-        "bensin_price": "227.90",
-        "disel_price": "264.10",
-        "id": "ÓBArnarsmári"
-    },
-    {
-        "station": "ÓB",
-        "address": "Bæjarlind",
-        "bensin_price": "227.90",
-        "disel_price": "264.10",
-        "id": "ÓBBæjarlind"
-    },
-    {
-        "station": "ÓB",
-        "address": "Fjarðarkaup",
-        "bensin_price": "227.90",
-        "disel_price": "264.10",
-        "id": "ÓBFjarðarkaup"
-    },
-    {
-        "station": "ÓB",
-        "address": "Hamraborg",
-        "bensin_price": "227.90",
-        "disel_price": "264.10",
-        "id": "ÓBHamraborg"
-    },
-    {
-        "station": "ÓB",
-        "address": "Klöpp",
-        "bensin_price": "227.90",
-        "disel_price": "264.10",
-        "id": "ÓBKlöpp"
     },
     {
         "station": "N1",
@@ -661,7 +661,7 @@
         "station": "ÓB",
         "address": "Selfoss",
         "bensin_price": "224.90",
-        "disel_price": "264.10",
+        "disel_price": "261.80",
         "id": "ÓBSelfoss"
     },
     {
@@ -1113,6 +1113,20 @@
         "id": "N1Akureyri- Tryggvabraut"
     },
     {
+        "station": "ÓB",
+        "address": "Hlíðarbraut, Akureyri",
+        "bensin_price": "224.90",
+        "disel_price": "261.80",
+        "id": "ÓBHlíðarbraut, Akureyri"
+    },
+    {
+        "station": "ÓB",
+        "address": "Laugarbakki",
+        "bensin_price": "224.90",
+        "disel_price": "261.80",
+        "id": "ÓBLaugarbakki"
+    },
+    {
         "station": "Orkan",
         "address": "Árskógssandur",
         "bensin_price": "227.10",
@@ -1160,20 +1174,6 @@
         "bensin_price": "227.90",
         "disel_price": "254.90",
         "id": "N1Hörgárbraut"
-    },
-    {
-        "station": "ÓB",
-        "address": "Hlíðarbraut, Akureyri",
-        "bensin_price": "227.90",
-        "disel_price": "264.10",
-        "id": "ÓBHlíðarbraut, Akureyri"
-    },
-    {
-        "station": "ÓB",
-        "address": "Laugarbakki",
-        "bensin_price": "227.90",
-        "disel_price": "264.10",
-        "id": "ÓBLaugarbakki"
     },
     {
         "station": "N1",
@@ -1554,6 +1554,13 @@
         "id": "N1Borgarnes"
     },
     {
+        "station": "ÓB",
+        "address": "Borgarnes",
+        "bensin_price": "224.90",
+        "disel_price": "261.80",
+        "id": "ÓBBorgarnes"
+    },
+    {
         "station": "Orkan",
         "address": "Akranes, Skagabraut",
         "bensin_price": "227.10",
@@ -1601,13 +1608,6 @@
         "bensin_price": "227.10",
         "disel_price": "253.70",
         "id": "OrkanÓlafsvík"
-    },
-    {
-        "station": "ÓB",
-        "address": "Borgarnes",
-        "bensin_price": "227.90",
-        "disel_price": "264.10",
-        "id": "ÓBBorgarnes"
     },
     {
         "station": "N1",
