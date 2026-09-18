@@ -134,38 +134,38 @@
     },
     {
         "station": "N1",
-        "address": "Fiskislóð",
-        "bensin_price": "239.60",
-        "disel_price": "280.90",
-        "id": "N1Fiskislóð"
-    },
-    {
-        "station": "N1",
         "address": "Norðlingaholt",
-        "bensin_price": "239.60",
-        "disel_price": "280.90",
+        "bensin_price": "242.60",
+        "disel_price": "283.90",
         "id": "N1Norðlingaholt"
     },
     {
         "station": "N1",
-        "address": "Norðurhella",
-        "bensin_price": "239.60",
-        "disel_price": "280.90",
-        "id": "N1Norðurhella"
-    },
-    {
-        "station": "N1",
         "address": "Reykjavíkurvegur",
-        "bensin_price": "239.60",
-        "disel_price": "280.90",
+        "bensin_price": "242.60",
+        "disel_price": "283.90",
         "id": "N1Reykjavíkurvegur"
     },
     {
         "station": "N1",
         "address": "Skógarlind",
-        "bensin_price": "239.60",
-        "disel_price": "280.90",
+        "bensin_price": "242.60",
+        "disel_price": "283.90",
         "id": "N1Skógarlind"
+    },
+    {
+        "station": "N1",
+        "address": "Fiskislóð",
+        "bensin_price": "242.60",
+        "disel_price": "283.90",
+        "id": "N1Fiskislóð"
+    },
+    {
+        "station": "N1",
+        "address": "Norðurhella",
+        "bensin_price": "242.60",
+        "disel_price": "283.90",
+        "id": "N1Norðurhella"
     },
     {
         "station": "Orkan",
@@ -457,72 +457,72 @@
     {
         "station": "N1",
         "address": "Ártúnshöfði",
-        "bensin_price": "272.40",
-        "disel_price": "308.50",
+        "bensin_price": "275.40",
+        "disel_price": "311.50",
         "id": "N1Ártúnshöfði"
     },
     {
         "station": "N1",
-        "address": "Ásvellir",
-        "bensin_price": "272.40",
-        "disel_price": "308.50",
-        "id": "N1Ásvellir"
-    },
-    {
-        "station": "N1",
         "address": "Bíldshöfði",
-        "bensin_price": "272.40",
-        "disel_price": "308.50",
+        "bensin_price": "275.40",
+        "disel_price": "311.50",
         "id": "N1Bíldshöfði"
     },
     {
         "station": "N1",
         "address": "Borgartún",
-        "bensin_price": "272.40",
-        "disel_price": "308.50",
+        "bensin_price": "275.40",
+        "disel_price": "311.50",
         "id": "N1Borgartún"
     },
     {
         "station": "N1",
-        "address": "Fossvogur",
-        "bensin_price": "272.40",
-        "disel_price": "308.50",
-        "id": "N1Fossvogur"
-    },
-    {
-        "station": "N1",
-        "address": "Gagnvegur",
-        "bensin_price": "272.40",
-        "disel_price": "308.50",
-        "id": "N1Gagnvegur"
-    },
-    {
-        "station": "N1",
         "address": "Háholt",
-        "bensin_price": "272.40",
-        "disel_price": "308.50",
+        "bensin_price": "275.40",
+        "disel_price": "311.50",
         "id": "N1Háholt"
     },
     {
         "station": "N1",
         "address": "Hringbraut",
-        "bensin_price": "272.40",
-        "disel_price": "308.50",
+        "bensin_price": "275.40",
+        "disel_price": "311.50",
         "id": "N1Hringbraut"
     },
     {
         "station": "N1",
         "address": "Lækjargata - Hafnarfjörður",
-        "bensin_price": "272.40",
-        "disel_price": "308.50",
+        "bensin_price": "275.40",
+        "disel_price": "311.50",
         "id": "N1Lækjargata - Hafnarfjörður"
     },
     {
         "station": "N1",
         "address": "Stórihjalli",
-        "bensin_price": "272.40",
-        "disel_price": "308.50",
+        "bensin_price": "275.40",
+        "disel_price": "311.50",
         "id": "N1Stórihjalli"
+    },
+    {
+        "station": "N1",
+        "address": "Ásvellir",
+        "bensin_price": "275.40",
+        "disel_price": "311.50",
+        "id": "N1Ásvellir"
+    },
+    {
+        "station": "N1",
+        "address": "Fossvogur",
+        "bensin_price": "275.40",
+        "disel_price": "311.50",
+        "id": "N1Fossvogur"
+    },
+    {
+        "station": "N1",
+        "address": "Gagnvegur",
+        "bensin_price": "275.40",
+        "disel_price": "311.50",
+        "id": "N1Gagnvegur"
     },
     {
         "station": "Orkan",
@@ -603,45 +603,45 @@
     },
     {
         "station": "N1",
-        "address": "Flugvellir",
-        "bensin_price": "272.40",
-        "disel_price": "295.10",
-        "id": "N1Flugvellir"
-    },
-    {
-        "station": "N1",
         "address": "Garður",
-        "bensin_price": "272.40",
-        "disel_price": "308.50",
+        "bensin_price": "275.40",
+        "disel_price": "311.50",
         "id": "N1Garður"
     },
     {
         "station": "N1",
         "address": "Reykjanesbær",
-        "bensin_price": "272.40",
-        "disel_price": "308.50",
+        "bensin_price": "275.40",
+        "disel_price": "311.50",
         "id": "N1Reykjanesbær"
     },
     {
         "station": "N1",
         "address": "Sandgerði",
-        "bensin_price": "272.40",
-        "disel_price": "308.50",
+        "bensin_price": "275.40",
+        "disel_price": "311.50",
         "id": "N1Sandgerði"
     },
     {
         "station": "N1",
-        "address": "Vallarheiði",
-        "bensin_price": "272.40",
-        "disel_price": "302.90",
-        "id": "N1Vallarheiði"
+        "address": "Vogar",
+        "bensin_price": "275.40",
+        "disel_price": "311.50",
+        "id": "N1Vogar"
     },
     {
         "station": "N1",
-        "address": "Vogar",
-        "bensin_price": "272.40",
-        "disel_price": "308.50",
-        "id": "N1Vogar"
+        "address": "Flugvellir",
+        "bensin_price": "275.40",
+        "disel_price": "298.10",
+        "id": "N1Flugvellir"
+    },
+    {
+        "station": "N1",
+        "address": "Vallarheiði",
+        "bensin_price": "275.40",
+        "disel_price": "305.90",
+        "id": "N1Vallarheiði"
     },
     {
         "station": "Orkan",
@@ -677,13 +677,6 @@
         "bensin_price": "267.80",
         "disel_price": "304.00",
         "id": "OrkanHveragerði, Sunnumörk"
-    },
-    {
-        "station": "N1",
-        "address": "Hveragerði",
-        "bensin_price": "267.90",
-        "disel_price": "304.10",
-        "id": "N1Hveragerði"
     },
     {
         "station": "Atlantsolía",
@@ -791,6 +784,13 @@
         "id": "ÓBÞorlákshöfn"
     },
     {
+        "station": "N1",
+        "address": "Hveragerði",
+        "bensin_price": "270.90",
+        "disel_price": "307.10",
+        "id": "N1Hveragerði"
+    },
+    {
         "station": "Olís",
         "address": "Hella",
         "bensin_price": "271.60",
@@ -821,92 +821,92 @@
     {
         "station": "N1",
         "address": "Árnes",
-        "bensin_price": "272.40",
-        "disel_price": "308.50",
+        "bensin_price": "275.40",
+        "disel_price": "311.50",
         "id": "N1Árnes"
     },
     {
         "station": "N1",
         "address": "Brautarhóll",
-        "bensin_price": "272.40",
-        "disel_price": "308.50",
+        "bensin_price": "275.40",
+        "disel_price": "311.50",
         "id": "N1Brautarhóll"
     },
     {
         "station": "N1",
         "address": "Fagurhólsmýri",
-        "bensin_price": "272.40",
-        "disel_price": "308.50",
+        "bensin_price": "275.40",
+        "disel_price": "311.50",
         "id": "N1Fagurhólsmýri"
     },
     {
         "station": "N1",
         "address": "Flúðir",
-        "bensin_price": "272.40",
-        "disel_price": "308.50",
+        "bensin_price": "275.40",
+        "disel_price": "311.50",
         "id": "N1Flúðir"
     },
     {
         "station": "N1",
         "address": "Geysir",
-        "bensin_price": "272.40",
-        "disel_price": "308.50",
+        "bensin_price": "275.40",
+        "disel_price": "311.50",
         "id": "N1Geysir"
     },
     {
         "station": "N1",
         "address": "Hvolsvöllur",
-        "bensin_price": "272.40",
-        "disel_price": "308.50",
+        "bensin_price": "275.40",
+        "disel_price": "311.50",
         "id": "N1Hvolsvöllur"
     },
     {
         "station": "N1",
         "address": "Höfn",
-        "bensin_price": "272.40",
-        "disel_price": "308.50",
+        "bensin_price": "275.40",
+        "disel_price": "311.50",
         "id": "N1Höfn"
     },
     {
         "station": "N1",
         "address": "Kirkjubæjarklaustur",
-        "bensin_price": "272.40",
-        "disel_price": "308.50",
+        "bensin_price": "275.40",
+        "disel_price": "311.50",
         "id": "N1Kirkjubæjarklaustur"
     },
     {
         "station": "N1",
         "address": "Laugarvatn",
-        "bensin_price": "272.40",
-        "disel_price": "308.50",
+        "bensin_price": "275.40",
+        "disel_price": "311.50",
         "id": "N1Laugarvatn"
     },
     {
         "station": "N1",
         "address": "Selfoss",
-        "bensin_price": "272.40",
-        "disel_price": "302.90",
+        "bensin_price": "275.40",
+        "disel_price": "305.90",
         "id": "N1Selfoss"
     },
     {
         "station": "N1",
         "address": "Vestmannaeyjar",
-        "bensin_price": "272.40",
-        "disel_price": "308.50",
+        "bensin_price": "275.40",
+        "disel_price": "311.50",
         "id": "N1Vestmannaeyjar"
     },
     {
         "station": "N1",
         "address": "Vík",
-        "bensin_price": "272.40",
-        "disel_price": "304.10",
+        "bensin_price": "275.40",
+        "disel_price": "307.10",
         "id": "N1Vík"
     },
     {
         "station": "N1",
         "address": "Þorlákshöfn",
         "bensin_price": null,
-        "disel_price": "308.50",
+        "disel_price": "311.50",
         "id": "N1Þorlákshöfn"
     },
     {
@@ -1017,58 +1017,58 @@
     {
         "station": "N1",
         "address": "Borgarfjörður Eystri",
-        "bensin_price": "272.40",
-        "disel_price": "308.50",
+        "bensin_price": "275.40",
+        "disel_price": "311.50",
         "id": "N1Borgarfjörður Eystri"
     },
     {
         "station": "N1",
         "address": "Breiðdalsvík",
-        "bensin_price": "272.40",
-        "disel_price": "308.50",
+        "bensin_price": "275.40",
+        "disel_price": "311.50",
         "id": "N1Breiðdalsvík"
     },
     {
         "station": "N1",
         "address": "Djúpivogur",
-        "bensin_price": "272.40",
-        "disel_price": "308.50",
+        "bensin_price": "275.40",
+        "disel_price": "311.50",
         "id": "N1Djúpivogur"
     },
     {
         "station": "N1",
         "address": "Egilsstaðir",
-        "bensin_price": "272.40",
-        "disel_price": "308.50",
+        "bensin_price": "275.40",
+        "disel_price": "311.50",
         "id": "N1Egilsstaðir"
     },
     {
         "station": "N1",
-        "address": "Eskifjörður",
-        "bensin_price": "272.40",
-        "disel_price": "308.50",
-        "id": "N1Eskifjörður"
-    },
-    {
-        "station": "N1",
         "address": "Reyðarfjörður",
-        "bensin_price": "272.40",
-        "disel_price": "308.50",
+        "bensin_price": "275.40",
+        "disel_price": "311.50",
         "id": "N1Reyðarfjörður"
     },
     {
         "station": "N1",
         "address": "Stöðvarfjörður",
-        "bensin_price": "272.40",
-        "disel_price": "308.50",
+        "bensin_price": "275.40",
+        "disel_price": "311.50",
         "id": "N1Stöðvarfjörður"
     },
     {
         "station": "N1",
         "address": "Vopnafjörður",
-        "bensin_price": "272.40",
-        "disel_price": "308.50",
+        "bensin_price": "275.40",
+        "disel_price": "311.50",
         "id": "N1Vopnafjörður"
+    },
+    {
+        "station": "N1",
+        "address": "Eskifjörður",
+        "bensin_price": "275.40",
+        "disel_price": "311.50",
+        "id": "N1Eskifjörður"
     },
     {
         "station": "Orkan",
@@ -1122,8 +1122,8 @@
     {
         "station": "N1",
         "address": "Akureyri- Tryggvabraut",
-        "bensin_price": "239.60",
-        "disel_price": "280.90",
+        "bensin_price": "242.60",
+        "disel_price": "283.90",
         "id": "N1Akureyri- Tryggvabraut"
     },
     {
@@ -1143,8 +1143,8 @@
     {
         "station": "N1",
         "address": "Hörgárbraut",
-        "bensin_price": "264.50",
-        "disel_price": "300.70",
+        "bensin_price": "267.50",
+        "disel_price": "303.70",
         "id": "N1Hörgárbraut"
     },
     {
@@ -1253,13 +1253,6 @@
         "id": "ÓBVarmahlíð"
     },
     {
-        "station": "N1",
-        "address": "Húsavík",
-        "bensin_price": "270.10",
-        "disel_price": "305.20",
-        "id": "N1Húsavík"
-    },
-    {
         "station": "Olís",
         "address": "Húsavík",
         "bensin_price": "271.60",
@@ -1275,115 +1268,122 @@
     },
     {
         "station": "N1",
+        "address": "Húsavík",
+        "bensin_price": "273.10",
+        "disel_price": "308.20",
+        "id": "N1Húsavík"
+    },
+    {
+        "station": "N1",
         "address": "Akureyri- Leiruvegur",
-        "bensin_price": "272.40",
-        "disel_price": "308.50",
+        "bensin_price": "275.40",
+        "disel_price": "311.50",
         "id": "N1Akureyri- Leiruvegur"
     },
     {
         "station": "N1",
-        "address": "Ásbyrgi",
-        "bensin_price": "272.40",
-        "disel_price": "308.50",
-        "id": "N1Ásbyrgi"
-    },
-    {
-        "station": "N1",
         "address": "Bakkafjörður",
-        "bensin_price": "272.40",
-        "disel_price": "308.50",
+        "bensin_price": "275.40",
+        "disel_price": "311.50",
         "id": "N1Bakkafjörður"
     },
     {
         "station": "N1",
         "address": "Blönduós",
-        "bensin_price": "272.40",
-        "disel_price": "308.50",
+        "bensin_price": "275.40",
+        "disel_price": "311.50",
         "id": "N1Blönduós"
     },
     {
         "station": "N1",
-        "address": "Dalvík",
-        "bensin_price": "272.40",
-        "disel_price": "308.50",
-        "id": "N1Dalvík"
-    },
-    {
-        "station": "N1",
-        "address": "Fosshóll",
-        "bensin_price": "272.40",
-        "disel_price": "308.50",
-        "id": "N1Fosshóll"
-    },
-    {
-        "station": "N1",
-        "address": "Grenivík",
-        "bensin_price": "272.40",
-        "disel_price": "308.50",
-        "id": "N1Grenivík"
-    },
-    {
-        "station": "N1",
-        "address": "Hofsós",
-        "bensin_price": "272.40",
-        "disel_price": "308.50",
-        "id": "N1Hofsós"
-    },
-    {
-        "station": "N1",
-        "address": "Kópasker",
-        "bensin_price": "272.40",
-        "disel_price": "308.50",
-        "id": "N1Kópasker"
-    },
-    {
-        "station": "N1",
-        "address": "Laugar",
-        "bensin_price": "272.40",
-        "disel_price": "308.50",
-        "id": "N1Laugar"
-    },
-    {
-        "station": "N1",
-        "address": "Raufarhöfn",
-        "bensin_price": "272.40",
-        "disel_price": "308.50",
-        "id": "N1Raufarhöfn"
-    },
-    {
-        "station": "N1",
         "address": "Reykjahlíð",
-        "bensin_price": "272.40",
-        "disel_price": "308.50",
+        "bensin_price": "275.40",
+        "disel_price": "311.50",
         "id": "N1Reykjahlíð"
     },
     {
         "station": "N1",
         "address": "Sauðárkrókur",
-        "bensin_price": "272.40",
-        "disel_price": "308.50",
+        "bensin_price": "275.40",
+        "disel_price": "311.50",
         "id": "N1Sauðárkrókur"
     },
     {
         "station": "N1",
         "address": "Staðarskáli",
-        "bensin_price": "272.40",
-        "disel_price": "308.50",
+        "bensin_price": "275.40",
+        "disel_price": "311.50",
         "id": "N1Staðarskáli"
     },
     {
         "station": "N1",
-        "address": "Víðihlíð",
-        "bensin_price": "272.40",
-        "disel_price": "308.50",
-        "id": "N1Víðihlíð"
+        "address": "Þórshöfn",
+        "bensin_price": "275.40",
+        "disel_price": "311.50",
+        "id": "N1Þórshöfn"
     },
     {
         "station": "N1",
-        "address": "Þórshöfn",
-        "bensin_price": "272.40",
-        "disel_price": "308.50",
-        "id": "N1Þórshöfn"
+        "address": "Ásbyrgi",
+        "bensin_price": "275.40",
+        "disel_price": "311.50",
+        "id": "N1Ásbyrgi"
+    },
+    {
+        "station": "N1",
+        "address": "Dalvík",
+        "bensin_price": "275.40",
+        "disel_price": "311.50",
+        "id": "N1Dalvík"
+    },
+    {
+        "station": "N1",
+        "address": "Fosshóll",
+        "bensin_price": "275.40",
+        "disel_price": "311.50",
+        "id": "N1Fosshóll"
+    },
+    {
+        "station": "N1",
+        "address": "Grenivík",
+        "bensin_price": "275.40",
+        "disel_price": "311.50",
+        "id": "N1Grenivík"
+    },
+    {
+        "station": "N1",
+        "address": "Hofsós",
+        "bensin_price": "275.40",
+        "disel_price": "311.50",
+        "id": "N1Hofsós"
+    },
+    {
+        "station": "N1",
+        "address": "Kópasker",
+        "bensin_price": "275.40",
+        "disel_price": "311.50",
+        "id": "N1Kópasker"
+    },
+    {
+        "station": "N1",
+        "address": "Laugar",
+        "bensin_price": "275.40",
+        "disel_price": "311.50",
+        "id": "N1Laugar"
+    },
+    {
+        "station": "N1",
+        "address": "Raufarhöfn",
+        "bensin_price": "275.40",
+        "disel_price": "311.50",
+        "id": "N1Raufarhöfn"
+    },
+    {
+        "station": "N1",
+        "address": "Víðihlíð",
+        "bensin_price": "275.40",
+        "disel_price": "311.50",
+        "id": "N1Víðihlíð"
     },
     {
         "station": "ÓB",
@@ -1405,13 +1405,6 @@
         "bensin_price": "266.60",
         "disel_price": "301.30",
         "id": "ÓBÍsafjörður"
-    },
-    {
-        "station": "N1",
-        "address": "Ísafirði",
-        "bensin_price": "267.90",
-        "disel_price": "305.20",
-        "id": "N1Ísafirði"
     },
     {
         "station": "Orkan",
@@ -1450,72 +1443,79 @@
     },
     {
         "station": "N1",
+        "address": "Ísafirði",
+        "bensin_price": "270.90",
+        "disel_price": "308.20",
+        "id": "N1Ísafirði"
+    },
+    {
+        "station": "N1",
         "address": "Bjarkalundur",
-        "bensin_price": "272.40",
-        "disel_price": "308.50",
+        "bensin_price": "275.40",
+        "disel_price": "311.50",
         "id": "N1Bjarkalundur"
     },
     {
         "station": "N1",
         "address": "Drangsnes",
-        "bensin_price": "272.40",
-        "disel_price": "308.50",
+        "bensin_price": "275.40",
+        "disel_price": "311.50",
         "id": "N1Drangsnes"
     },
     {
         "station": "N1",
         "address": "Flateyri",
-        "bensin_price": "272.40",
-        "disel_price": "308.50",
+        "bensin_price": "275.40",
+        "disel_price": "311.50",
         "id": "N1Flateyri"
     },
     {
         "station": "N1",
         "address": "Flókalundur",
-        "bensin_price": "272.40",
-        "disel_price": "308.50",
+        "bensin_price": "275.40",
+        "disel_price": "311.50",
         "id": "N1Flókalundur"
     },
     {
         "station": "N1",
         "address": "Hólmavík",
-        "bensin_price": "272.40",
-        "disel_price": "308.50",
+        "bensin_price": "275.40",
+        "disel_price": "311.50",
         "id": "N1Hólmavík"
     },
     {
         "station": "N1",
         "address": "Norðurfjörður",
-        "bensin_price": "272.40",
-        "disel_price": "308.50",
+        "bensin_price": "275.40",
+        "disel_price": "311.50",
         "id": "N1Norðurfjörður"
     },
     {
         "station": "N1",
         "address": "Patreksfjörður",
-        "bensin_price": "272.40",
-        "disel_price": "308.50",
+        "bensin_price": "275.40",
+        "disel_price": "311.50",
         "id": "N1Patreksfjörður"
     },
     {
         "station": "N1",
         "address": "Reykhólar",
-        "bensin_price": "272.40",
-        "disel_price": "308.50",
+        "bensin_price": "275.40",
+        "disel_price": "311.50",
         "id": "N1Reykhólar"
     },
     {
         "station": "N1",
         "address": "Tálknafjörður",
-        "bensin_price": "272.40",
-        "disel_price": "308.50",
+        "bensin_price": "275.40",
+        "disel_price": "311.50",
         "id": "N1Tálknafjörður"
     },
     {
         "station": "N1",
         "address": "Þingeyri",
-        "bensin_price": "272.40",
-        "disel_price": "308.50",
+        "bensin_price": "275.40",
+        "disel_price": "311.50",
         "id": "N1Þingeyri"
     },
     {
@@ -1563,8 +1563,8 @@
     {
         "station": "N1",
         "address": "Borgarnes",
-        "bensin_price": "257.80",
-        "disel_price": "299.60",
+        "bensin_price": "260.80",
+        "disel_price": "302.60",
         "id": "N1Borgarnes"
     },
     {
@@ -1666,13 +1666,6 @@
         "id": "ÓBGrundartangi"
     },
     {
-        "station": "N1",
-        "address": "Akranes",
-        "bensin_price": "270.10",
-        "disel_price": "308.50",
-        "id": "N1Akranes"
-    },
-    {
         "station": "Olís",
         "address": "Akranes, Esjubraut",
         "bensin_price": "270.60",
@@ -1681,51 +1674,58 @@
     },
     {
         "station": "N1",
+        "address": "Akranes",
+        "bensin_price": "273.10",
+        "disel_price": "311.50",
+        "id": "N1Akranes"
+    },
+    {
+        "station": "N1",
+        "address": "Búðardalur",
+        "bensin_price": "275.40",
+        "disel_price": "311.50",
+        "id": "N1Búðardalur"
+    },
+    {
+        "station": "N1",
+        "address": "Ólafsvík",
+        "bensin_price": "275.40",
+        "disel_price": "311.50",
+        "id": "N1Ólafsvík"
+    },
+    {
+        "station": "N1",
         "address": "Akranes, Elínarvegur",
-        "bensin_price": "272.40",
-        "disel_price": "301.80",
+        "bensin_price": "275.40",
+        "disel_price": "304.80",
         "id": "N1Akranes, Elínarvegur"
     },
     {
         "station": "N1",
         "address": "Breiðablik",
-        "bensin_price": "272.40",
-        "disel_price": "308.50",
+        "bensin_price": "275.40",
+        "disel_price": "311.50",
         "id": "N1Breiðablik"
     },
     {
         "station": "N1",
-        "address": "Búðardalur",
-        "bensin_price": "272.40",
-        "disel_price": "308.50",
-        "id": "N1Búðardalur"
-    },
-    {
-        "station": "N1",
         "address": "Grundarfjörður",
-        "bensin_price": "272.40",
-        "disel_price": "308.50",
+        "bensin_price": "275.40",
+        "disel_price": "311.50",
         "id": "N1Grundarfjörður"
     },
     {
         "station": "N1",
         "address": "Hellissandur",
-        "bensin_price": "272.40",
-        "disel_price": "308.50",
+        "bensin_price": "275.40",
+        "disel_price": "311.50",
         "id": "N1Hellissandur"
     },
     {
         "station": "N1",
-        "address": "Ólafsvík",
-        "bensin_price": "272.40",
-        "disel_price": "308.50",
-        "id": "N1Ólafsvík"
-    },
-    {
-        "station": "N1",
         "address": "Reykholt",
-        "bensin_price": "272.40",
-        "disel_price": "308.50",
+        "bensin_price": "275.40",
+        "disel_price": "311.50",
         "id": "N1Reykholt"
     }
 ]
